@@ -1,0 +1,42 @@
+{
+  "_help": "สไลด์แบนเนอร์หน้าแรก: วางรูปตามชื่อไฟล์ใน image แล้วรัน npm run build — ถ้ายังไม่มีไฟล์ หน้าเว็บจะแสดงกรอบบอกชื่อไฟล์แทน แก้ alt ให้ตรงกับข้อความในรูปทุกครั้ง",
+  "size": { "width": 1920, "height": 600 },
+  "defaultCaption": { "th": "สำนักงานราชบัณฑิตยสภา", "en": "Office of the Royal Society" },
+  "slides": [
+    {
+      "image": "assets/images/banners/slide-1.jpg",
+      "mobileImage": "assets/images/banners/slide-1-mobile.png",
+      "href": "#knowledge-search",
+      "title": { "th": "ค้นหาองค์ความรู้", "en": "Search knowledge" },
+      "alt": { "th": "แบนเนอร์ประชาสัมพันธ์: ค้นหาคำศัพท์ ศัพท์บัญญัติ และคำทับศัพท์ได้ในที่เดียว", "en": "Banner: search words, coined terms and transliterations in one place" }
+    },
+    {
+      "image": "assets/images/banners/slide-2.jpg",
+      "mobileImage": "assets/images/banners/slide-2-mobile.png",
+      "page": "knowledge-ai",
+      "title": { "th": "ผู้ช่วยองค์ความรู้", "en": "Knowledge assistant" },
+      "alt": { "th": "แบนเนอร์ประชาสัมพันธ์: ผู้ช่วยองค์ความรู้ราชบัณฑิตยสภา ถามคำถามพร้อมแหล่งอ้างอิง", "en": "Banner: ORST Knowledge AI answers questions with cited sources" }
+    },
+    {
+      "image": "assets/images/banners/slide-3.jpg",
+      "mobileImage": "assets/images/banners/slide-3-mobile.png",
+      "page": "publications",
+      "title": { "th": "หนังสือและ E-Book", "en": "Books & E-Books" },
+      "alt": { "th": "แบนเนอร์ประชาสัมพันธ์: หนังสือและ E-Book ของสำนักงานราชบัณฑิตยสภา", "en": "Banner: books and e-books from the Office of the Royal Society" }
+    },
+    {
+      "image": "assets/images/banners/slide-4.jpg",
+      "mobileImage": "assets/images/banners/slide-4-mobile.png",
+      "page": "news",
+      "title": { "th": "ข่าวและกิจกรรม", "en": "News & Events" },
+      "alt": { "th": "แบนเนอร์ประชาสัมพันธ์: ข่าวและกิจกรรมล่าสุดของสำนักงานราชบัณฑิตยสภา", "en": "Banner: latest news and events from the Office of the Royal Society" }
+    },
+    {
+      "image": "assets/images/banners/slide-5.jpg",
+      "mobileImage": "assets/images/banners/slide-5-mobile.png",
+      "page": "e-service",
+      "title": { "th": "บริการออนไลน์ e-Service", "en": "Online e-Services" },
+      "alt": { "th": "แบนเนอร์ประชาสัมพันธ์: บริการออนไลน์ของสำนักงานราชบัณฑิตยสภา", "en": "Banner: online services of the Office of the Royal Society" }
+    }
+  ]
+}

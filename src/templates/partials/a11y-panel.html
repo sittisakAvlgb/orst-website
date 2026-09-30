@@ -1,0 +1,98 @@
+<!-- Display and reading preferences. accessibility.js applies every change immediately and stores it;
+     without JavaScript the button that opens this dialog stays hidden and nothing here is reachable. -->
+<dialog class="a11y-panel" id="a11y-panel" aria-labelledby="a11y-panel-title" data-a11y-panel>
+  <form class="a11y-panel__layout" method="dialog" data-a11y-options>
+    <div class="a11y-panel__header">
+      <span class="a11y-panel__mark"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-accessibility"></use></svg></span>
+      <div>
+        <h2 class="a11y-panel__title" id="a11y-panel-title">[[t:a11y.panelTitle]]</h2>
+        <p class="a11y-panel__intro">[[t:a11y.panelIntro]]</p>
+      </div>
+      <button type="button" class="icon-button a11y-panel__close" data-a11y-close>
+        <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-close"></use></svg>
+        <span class="visually-hidden">[[t:a11y.panelClose]]</span>
+      </button>
+    </div>
+
+    <div class="a11y-panel__body">
+      <fieldset class="a11y-group">
+        <legend class="a11y-group__title">[[t:a11y.textSize]]</legend>
+        <div class="a11y-segmented">
+          <label class="a11y-segmented__option"><input type="radio" name="textSize" value="small"><span>[[t:a11y.textSmall]]</span></label>
+          <label class="a11y-segmented__option"><input type="radio" name="textSize" value="default" checked><span>[[t:a11y.textDefault]]</span></label>
+          <label class="a11y-segmented__option"><input type="radio" name="textSize" value="large"><span>[[t:a11y.textLarge]]</span></label>
+          <label class="a11y-segmented__option"><input type="radio" name="textSize" value="larger"><span>[[t:a11y.textLarger]]</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="a11y-group">
+        <legend class="a11y-group__title">[[t:a11y.displayGroup]]</legend>
+        <label class="a11y-switch">
+          <svg class="icon a11y-switch__icon" aria-hidden="true" focusable="false"><use href="#i-contrast"></use></svg>
+          <span class="a11y-switch__label">[[t:a11y.contrastHigh]]</span>
+          <input type="checkbox" name="contrast" value="high">
+          <span class="a11y-switch__track" aria-hidden="true"></span>
+        </label>
+        <label class="a11y-switch">
+          <svg class="icon a11y-switch__icon" aria-hidden="true" focusable="false"><use href="#i-book"></use></svg>
+          <span class="a11y-switch__label">[[t:a11y.readable]]<span class="a11y-switch__hint">[[t:a11y.readableHint]]</span></span>
+          <input type="checkbox" name="readable" value="on">
+          <span class="a11y-switch__track" aria-hidden="true"></span>
+        </label>
+        <label class="a11y-switch">
+          <svg class="icon a11y-switch__icon" aria-hidden="true" focusable="false"><use href="#i-external"></use></svg>
+          <span class="a11y-switch__label">[[t:a11y.linkHighlight]]</span>
+          <input type="checkbox" name="links" value="on">
+          <span class="a11y-switch__track" aria-hidden="true"></span>
+        </label>
+        <label class="a11y-switch">
+          <svg class="icon a11y-switch__icon" aria-hidden="true" focusable="false"><use href="#i-document"></use></svg>
+          <span class="a11y-switch__label">[[t:a11y.headingHighlight]]</span>
+          <input type="checkbox" name="headings" value="on">
+          <span class="a11y-switch__track" aria-hidden="true"></span>
+        </label>
+        <label class="a11y-switch">
+          <svg class="icon a11y-switch__icon" aria-hidden="true" focusable="false"><use href="#i-knowledge"></use></svg>
+          <span class="a11y-switch__label">[[t:a11y.lineSpacing]]</span>
+          <input type="checkbox" name="spacing" value="on">
+          <span class="a11y-switch__track" aria-hidden="true"></span>
+        </label>
+      </fieldset>
+
+      <fieldset class="a11y-group">
+        <legend class="a11y-group__title">[[t:a11y.motionGroup]]</legend>
+        <label class="a11y-switch">
+          <svg class="icon a11y-switch__icon" aria-hidden="true" focusable="false"><use href="#i-pause"></use></svg>
+          <span class="a11y-switch__label">[[t:a11y.reduceMotion]]</span>
+          <input type="checkbox" name="motion" value="reduced">
+          <span class="a11y-switch__track" aria-hidden="true"></span>
+        </label>
+        <label class="a11y-switch">
+          <svg class="icon a11y-switch__icon" aria-hidden="true" focusable="false"><use href="#i-check"></use></svg>
+          <span class="a11y-switch__label">[[t:a11y.largeCursor]]</span>
+          <input type="checkbox" name="cursor" value="large">
+          <span class="a11y-switch__track" aria-hidden="true"></span>
+        </label>
+      </fieldset>
+
+      <!-- Read aloud uses the voices installed on the reader's own device; the script hides this
+           group when no Thai/English voice is available rather than offering something silent. -->
+      <fieldset class="a11y-group" hidden data-a11y-speech>
+        <legend class="a11y-group__title">[[t:a11y.readingGroup]]</legend>
+        <button type="button" class="a11y-action" data-a11y-speak aria-pressed="false">
+          <svg class="icon a11y-switch__icon" aria-hidden="true" focusable="false"><use href="#i-play"></use></svg>
+          <span data-a11y-speak-label>[[t:a11y.readAloud]]</span>
+        </button>
+        <p class="a11y-group__note">[[t:a11y.readAloudNote]]</p>
+      </fieldset>
+    </div>
+
+    <div class="a11y-panel__foot">
+      <button type="button" class="button button--quiet button--sm" data-a11y-reset>
+        <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-refresh"></use></svg>
+        [[t:a11y.reset]]
+      </button>
+      <button type="submit" class="button button--primary">[[t:a11y.done]]</button>
+    </div>
+  </form>
+</dialog>

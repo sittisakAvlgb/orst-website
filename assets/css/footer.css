@@ -1,0 +1,293 @@
+/**
+ * Site footer. Uses .theme-dark tokens (deep green, ivory text, gold accent).
+ * Over a background photo under a deep green shade: a top bar (logo, follow us), then five equal columns (contact,
+ * three groups of links, a small map), then a thin bottom bar.
+ * Below 768px the link columns become accordions (see footer JS in components.js).
+ */
+.site-footer {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--color-background);
+  color: var(--color-text-primary);
+}
+
+/* Background photo ([[hero:footer]], otherwise the library photo) under a deep green shade that keeps the text
+   readable; the shade is lighter at the top so the picture shows behind the logo row. */
+.site-footer::before,
+.site-footer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.site-footer::before {
+  z-index: -2;
+  background: var(--hero-image, url("../images/headers/home-books.jpg")) center 40% / cover no-repeat;
+}
+
+.site-footer::after {
+  z-index: -1;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--color-background) 80%, transparent) 0%,
+    color-mix(in srgb, var(--color-background) 92%, transparent) 45%,
+    var(--color-background) 100%
+  );
+}
+
+/* ---- Top bar: logo on the left, follow us on the right ---- */
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-16) var(--space-32);
+  padding-block: var(--space-32);
+  border-bottom: var(--border-width) solid var(--color-border);
+}
+
+.footer-brand__id { display: inline-flex; text-decoration: none; }
+
+/* The official lockup as supplied, at a readable height. */
+.footer-logo { width: auto; height: 56px; }
+
+.footer-follow { display: flex; align-items: center; gap: var(--space-16); }
+.footer-follow__label { font-size: var(--text-sm); font-weight: var(--weight-semibold); color: var(--color-accent); }
+
+/* ---- The map: a small card the height of its neighbours, with a link out to Google Maps ---- */
+
+.footer-map {
+  display: grid;
+  grid-template-rows: 8.5rem auto;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: rgb(255 255 255 / 0.04);
+  border: var(--border-width) solid rgb(255 255 255 / 0.14);
+  border-radius: var(--radius-lg);
+}
+
+.footer-map__frame { position: relative; }
+.footer-map__frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+.footer-map__placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-12) var(--space-16);
+  padding: var(--space-16);
+  text-align: center;
+}
+
+.footer-map__pin { width: 24px; height: 24px; color: var(--color-accent); }
+
+.footer-map__show {
+  min-height: 36px;
+  padding: 0 var(--space-24);
+  font: inherit;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--green-900);
+  background: var(--gold-400);
+  border: 0;
+  border-radius: var(--radius-button);
+  cursor: pointer;
+  transition: background-color var(--duration-fast) var(--ease-standard);
+}
+
+.footer-map__show:hover { background: var(--gold-200); }
+
+.footer-map__caption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2px var(--space-16);
+  padding: var(--space-8) var(--space-12);
+  font-size: var(--text-xs);
+  background: rgb(0 0 0 / 0.18);
+  border-top: var(--border-width) solid rgb(255 255 255 / 0.1);
+}
+
+.footer-map__open { display: inline-flex; align-items: center; gap: var(--space-8); }
+.footer-map__caption .icon { width: 16px; height: 16px; color: var(--color-accent); }
+.footer-map__open { font-weight: var(--weight-semibold); text-decoration: none; }
+.site-footer .footer-map__open:hover { text-decoration: underline; }
+
+/* ---- Five equal columns ---- */
+.site-footer__main {
+  display: grid;
+  gap: var(--space-32);
+  padding-block: var(--space-40);
+}
+
+@media (min-width: 768px) {
+  .site-footer__main { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-32) var(--space-40); }
+}
+
+@media (min-width: 1200px) {
+  .site-footer__main { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--space-32); }
+}
+
+.footer-org__address {
+  margin-bottom: var(--space-8);
+  font-size: var(--text-sm);
+  font-style: normal;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.footer-reach { display: grid; font-size: var(--text-sm); }
+
+.footer-reach a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  min-height: 32px;
+  text-decoration: none;
+}
+
+.footer-reach .icon { width: 16px; height: 16px; color: var(--color-accent); }
+.site-footer .footer-reach a:hover { text-decoration: underline; }
+
+.footer-social { display: flex; gap: var(--space-8); }
+
+/* Solid gold plates: a faint tint disappears against the footer photo. */
+.footer-social a {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  color: var(--green-900);
+  background: var(--gold-400);
+  border-radius: var(--radius-round);
+  transition: background-color var(--duration-fast) var(--ease-standard), color var(--duration-fast) var(--ease-standard);
+}
+
+.footer-social .icon { width: 20px; height: 20px; }
+.site-footer .footer-social a:hover { color: var(--green-900); background: var(--gold-200); }
+
+/* ---- Link columns ---- */
+.footer-heading {
+  margin: 0 0 var(--space-8);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-compact);
+  color: var(--color-accent);
+}
+
+.footer-links { display: grid; font-size: var(--text-sm); }
+
+.footer-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-standard), transform var(--duration-fast) var(--ease-standard);
+}
+
+.site-footer .footer-links a:hover { color: var(--color-text-primary); transform: translateX(3px); }
+
+@media (pointer: coarse) {
+  .footer-links a { min-height: var(--touch-target); }
+}
+
+/* ---- Mobile accordion mode, enabled by JavaScript below 768px ---- */
+.footer-group__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-16);
+  width: 100%;
+  min-height: 52px;
+  padding: 0;
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+}
+
+.footer-group.is-collapsible { border-bottom: var(--border-width) solid var(--color-border); }
+.footer-group.is-collapsible .footer-heading { margin: 0; }
+.footer-group.is-collapsible .footer-group__panel { padding-bottom: var(--space-12); }
+
+@media (max-width: 767px) {
+  .site-footer__main { gap: 0; }
+  .site-footer__main > .footer-group:not([data-footer-group]) { padding-block: var(--space-24); border-bottom: var(--border-width) solid var(--color-border); }
+  .site-footer__main > .footer-group:last-child { border-bottom: 0; }
+}
+
+/* ---- Bottom bar ---- */
+.site-footer__bottom {
+  position: relative;
+  border-top: var(--border-width) solid var(--color-border);
+  background: var(--color-inverse-surface-deep);
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+}
+
+.site-footer__bottom-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4) var(--space-24);
+  padding-block: var(--space-8);
+}
+
+.footer-bottom__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px var(--space-16);
+  margin-right: auto;
+}
+
+/* Visitor count: an icon, the label, the figure in gold, and the day it was read */
+.footer-visitors { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 2px var(--space-8); }
+.footer-visitors .icon { width: 16px; height: 16px; color: var(--color-accent); }
+.footer-visitors__count { font-size: var(--text-sm); font-weight: var(--weight-semibold); color: var(--gold-200); letter-spacing: 0.02em; }
+.footer-visitors__asof { padding-left: var(--space-8); color: var(--color-text-muted, rgb(255 255 255 / 0.6)); border-left: var(--border-width) solid var(--color-border); }
+
+.footer-bottom__links { display: flex; flex-wrap: wrap; align-items: center; gap: 0 var(--space-12); }
+
+.footer-bottom__links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+}
+
+.site-footer .footer-bottom__links a:hover { color: var(--color-text-primary); text-decoration: underline; }
+
+.footer-top-link {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  background: rgb(255 255 255 / 0.06);
+  border-radius: var(--radius-round);
+  transition: background-color var(--duration-fast) var(--ease-standard), color var(--duration-fast) var(--ease-standard);
+}
+
+.footer-top-link .icon { width: 16px; height: 16px; }
+.site-footer .footer-top-link:hover { color: var(--green-900); background: var(--gold-400); }
+
+@media (max-width: 767px) {
+  .site-footer__bottom-inner { align-items: flex-start; padding-block: var(--space-12); }
+  .footer-bottom__meta { flex-basis: calc(100% - 50px); }
+  .footer-bottom__links { order: 3; flex-basis: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-links a { transition: none; }
+}

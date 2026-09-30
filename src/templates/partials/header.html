@@ -1,0 +1,116 @@
+<header class="site-header" data-site-header>
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="[[href:home]]">
+        <img src="[[root]]assets/images/logo.png" width="430" height="134" alt="[[t:a11y.logoAlt]]">
+      </a>
+
+      <div class="topbar__tools">
+        <div class="topbar__row">
+          <nav aria-label="[[t:a11y.languageNav]]">
+            [[include:lang-switch]]
+          </nav>
+        </div>
+      </div>
+
+      <div class="topbar__mobile">
+        <button type="button" class="icon-button" aria-haspopup="dialog" data-search-open>
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg>
+          <span class="visually-hidden">[[t:search.label]]</span>
+        </button>
+        <a class="lang-toggle" href="[[alt-href]]" hreflang="[[alt-lang]]" lang="[[alt-lang]]" data-lang-link="[[alt-lang]]">[[t:langToggle.short]]<span class="visually-hidden"> [[t:langToggle.full]]</span></a>
+        <a class="icon-button" href="[[href:sitemap]]" data-drawer-open>
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-menu"></use></svg>
+          <span class="visually-hidden">[[t:a11y.openMenu]]</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="menubar">
+    <div class="container menubar__inner">
+      <a class="menubar__brand" href="[[href:home]]">
+        <img src="[[root]]assets/images/logo.png" width="430" height="134" alt="[[t:a11y.logoAlt]]">
+      </a>
+
+      <nav class="primary-nav" aria-label="[[t:a11y.mainNav]]" data-primary-nav>
+        <ul class="primary-nav__list">
+          [[primary-nav]]
+        </ul>
+      </nav>
+
+      <button type="button" class="icon-button menubar__search" aria-haspopup="dialog" data-search-open>
+        <svg class="icon icon--lg" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg>
+        <span class="visually-hidden">[[t:search.label]]</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<dialog class="drawer" id="mobile-nav" aria-label="[[t:nav.menu]]" data-drawer>
+  <div class="drawer__layout">
+    <div class="drawer__header">
+      <a class="brand drawer__brand" href="[[href:home]]">
+        <img src="[[root]]assets/images/logo.png" width="430" height="134" alt="[[t:a11y.logoAlt]]" loading="lazy">
+      </a>
+      <button type="button" class="icon-button" data-drawer-close>
+        <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-close"></use></svg>
+        <span class="visually-hidden">[[t:a11y.closeMenu]]</span>
+      </button>
+    </div>
+    <div class="drawer__body">
+      <button type="button" class="drawer__search" aria-haspopup="dialog" data-search-open>
+        <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg>
+        [[t:search.placeholderShort]]
+      </button>
+      <nav class="drawer-nav" aria-label="[[t:a11y.mainNav]]" data-drawer-nav>
+        [[drawer-nav]]
+      </nav>
+      <ul class="drawer__secondary">
+        <li><a class="button button--primary button--block" href="[[href:e-service]]">[[t:nav.eservice]]</a></li>
+        <li><a href="[[href:transparency]]">[[t:nav.transparency]]</a></li>
+        <li><a href="[[href:contact]]">[[t:nav.contact]]</a></li>
+        <li><a class="number" href="tel:[[c:contact.phoneHref]]">[[t:contact.phone]] [[c:contact.phoneDisplay]]</a></li>
+      </ul>
+      <button type="button" class="drawer__prefs-button" aria-haspopup="dialog" hidden data-a11y-open>
+        <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-accessibility"></use></svg>
+        [[t:a11y.panelOpen]]
+      </button>
+    </div>
+    <div class="drawer__footer">
+      <span class="text-sm text-secondary">[[t:a11y.language]]</span>
+      <nav aria-label="[[t:a11y.languageNav]]">
+        [[include:lang-switch]]
+      </nav>
+    </div>
+  </div>
+</dialog>
+
+<!-- Search window: the field on top, suggestions inline below it (search.js keeps them open here),
+     then shortcuts to the individual databases and keyboard hints. -->
+<dialog class="search-dialog" aria-labelledby="search-dialog-title" data-search-dialog>
+  <div class="search-dialog__panel">
+    <h2 class="visually-hidden" id="search-dialog-title">[[t:search.dialogTitle]]</h2>
+    <button type="button" class="icon-button search-dialog__close" data-search-close>
+      <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-close"></use></svg>
+      <span class="visually-hidden">[[t:a11y.closeSearch]]</span>
+    </button>
+    [[include:search-form]]
+    <nav class="search-dialog__scopes" aria-labelledby="search-dialog-scopes">
+      <p class="search-dialog__label" id="search-dialog-scopes">[[t:search.scopesLabel]]</p>
+      <ul class="search-dialog__scope-list">
+        <li><a class="search-dialog__scope" href="[[href:dictionary]]"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-dictionary"></use></svg>[[t:services.dictionary.name]]</a></li>
+        <li><a class="search-dialog__scope" href="[[href:terminology]]"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-terminology"></use></svg>[[t:services.terminology.name]]</a></li>
+        <li><a class="search-dialog__scope" href="[[href:transliteration]]"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-transliteration"></use></svg>[[t:services.transliteration.name]]</a></li>
+        <li><a class="search-dialog__scope" href="[[href:royal-society#members]]"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-members"></use></svg>[[t:search.scopeMembers]]</a></li>
+      </ul>
+    </nav>
+    <p class="search-dialog__hints" aria-hidden="true">
+      <span><kbd>↑</kbd><kbd>↓</kbd> [[t:search.hintMove]]</span>
+      <span><kbd>Enter</kbd> [[t:search.hintOpen]]</span>
+      <span><kbd>Esc</kbd> [[t:search.hintClose]]</span>
+    </p>
+  </div>
+</dialog>
+
+[[include:a11y-panel]]

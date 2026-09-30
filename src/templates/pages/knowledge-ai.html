@@ -1,0 +1,209 @@
+<div class="page-header">
+  <div class="container">
+    [[breadcrumb]]
+    <div class="page-header__body">
+      <p class="eyebrow" lang="en">ORST Knowledge AI</p>
+      <h1>[[t:pages.knowledge-ai.heading]]</h1>
+      <p class="lead">[[t:aiPage.lead]]</p>
+    </div>
+  </div>
+</div>
+
+<div class="section section--tight">
+  <div class="container ai-page">
+    <div data-ai-app>
+      <noscript><p class="notice">[[t:aiPage.noscript]]</p></noscript>
+
+      <form class="ai-composer" novalidate data-ai-form>
+        <label class="visually-hidden" for="ai-question">[[t:aiPage.inputLabel]]</label>
+        <textarea class="ai-composer__input" id="ai-question" name="question" rows="3" maxlength="500" required placeholder="[[t:aiPage.placeholder]]" aria-describedby="ai-hint" data-ai-input></textarea>
+        <div class="ai-composer__bar">
+          <p class="ai-composer__hint" id="ai-hint">[[t:aiPage.hint]]</p>
+          <button type="submit" class="button button--primary" data-ai-submit>
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-send"></use></svg>
+            <span>[[t:actions.askAi]]</span>
+          </button>
+        </div>
+      </form>
+      <p class="field__error" id="ai-error" hidden data-ai-error>
+        <svg class="icon icon--sm" aria-hidden="true" focusable="false"><use href="#i-alert"></use></svg>
+        <span>[[t:aiPage.errorEmpty]]</span>
+      </p>
+
+      <div class="ai-examples">
+        <p class="ai-examples__title" id="ai-examples-title">[[t:aiPage.examplesTitle]]</p>
+        <ul class="prompt-options prompt-options--two" aria-labelledby="ai-examples-title">
+          <li><button type="button" class="prompt-option" data-ai-example="aiTerm"><span>[[t:js.ai.examples.aiTerm]]</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg></button></li>
+          <li><button type="button" class="prompt-option" data-ai-example="softPower"><span>[[t:js.ai.examples.softPower]]</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg></button></li>
+          <li><button type="button" class="prompt-option" data-ai-example="metaverse"><span>[[t:js.ai.examples.metaverse]]</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg></button></li>
+          <li><button type="button" class="prompt-option" data-ai-example="thaiDocs"><span>[[t:js.ai.examples.thaiDocs]]</span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg></button></li>
+        </ul>
+      </div>
+
+      <div class="notice ai-examples">
+        <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-info"></use></svg>
+        <p>[[t:aiPage.disclaimer]]</p>
+      </div>
+
+      <p class="visually-hidden" role="status" data-ai-status></p>
+      <div class="ai-thread" data-ai-thread></div>
+    </div>
+
+    <aside class="ai-aside" aria-label="[[t:aiPage.asideLabel]]">
+      <section id="how-it-works" aria-labelledby="ai-how-title">
+        <h2 id="ai-how-title">[[t:aiPage.how.title]]</h2>
+        <ol class="step-list">
+          <li>[[t:aiPage.how.step1]]</li>
+          <li>[[t:aiPage.how.step2]]</li>
+          <li>[[t:aiPage.how.step3]]</li>
+          <li>[[t:aiPage.how.step4]]</li>
+        </ol>
+      </section>
+
+      <section aria-labelledby="ai-labels-title">
+        <h2 id="ai-labels-title">[[t:aiPage.labels.title]]</h2>
+        <div class="stack stack--8">
+          <p>
+            <span class="status status--official">
+              <svg class="icon icon--sm" aria-hidden="true" focusable="false"><use href="#i-official"></use></svg>
+              [[t:js.ai.labels.official]]
+            </span>
+          </p>
+          <p class="text-sm text-secondary">[[t:aiPage.labels.officialText]]</p>
+          <p><span class="status status--generated">[[t:js.ai.labels.generated]]</span></p>
+          <p class="text-sm text-secondary">[[t:aiPage.labels.generatedText]]</p>
+        </div>
+      </section>
+
+      <section aria-labelledby="ai-help-title">
+        <h2 id="ai-help-title">[[t:aiPage.help.title]]</h2>
+        <p class="text-sm text-secondary">[[t:aiPage.help.text]]</p>
+        <a class="text-link" href="[[href:contact]]">[[t:nav.contact]]<svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg></a>
+      </section>
+    </aside>
+  </div>
+</div>
+
+<template data-template="ai-loading">
+  <article class="ai-answer" aria-busy="true">
+    <p class="ai-answer__asked">[[t:aiPage.youAsked]]</p>
+    <h2 class="ai-answer__question" data-slot="question"></h2>
+    <div class="ai-answer__section loading-row">
+      <span class="spinner" aria-hidden="true"></span>
+      <span>[[t:aiPage.loading]]</span>
+    </div>
+    <div class="ai-answer__section stack stack--8" aria-hidden="true">
+      <span class="skeleton skeleton--title"></span>
+      <span class="skeleton skeleton--line"></span>
+      <span class="skeleton skeleton--line skeleton--medium"></span>
+    </div>
+  </article>
+</template>
+
+<template data-template="ai-answer">
+  <article class="ai-answer" tabindex="-1">
+    <p class="ai-answer__asked">[[t:aiPage.youAsked]]</p>
+    <h2 class="ai-answer__question" data-slot="question"></h2>
+
+    <section class="ai-answer__section">
+      <h3 class="ai-answer__section-title">[[t:aiPage.sections.answer]]</h3>
+      <p class="ai-answer__summary" data-slot="summary"></p>
+    </section>
+
+    <section class="ai-answer__section" data-slot="official-section">
+      <h3 class="ai-answer__section-title">[[t:aiPage.sections.official]]</h3>
+      <div class="answer-block answer-block--official">
+        <p class="answer-block__label cluster">
+          <span class="status status--official">
+            <svg class="icon icon--sm" aria-hidden="true" focusable="false"><use href="#i-official"></use></svg>
+            [[t:js.ai.labels.official]]
+          </span>
+          <span class="status status--sample" data-slot="sample">[[t:common.sampleData]]</span>
+        </p>
+        <p class="answer-block__term" data-slot="official-term"></p>
+        <p data-slot="official-text"></p>
+        <p class="answer-block__source" data-slot="official-source"></p>
+      </div>
+    </section>
+
+    <section class="ai-answer__section" hidden data-slot="no-official-section">
+      <h3 class="ai-answer__section-title">[[t:aiPage.sections.official]]</h3>
+      <div class="notice notice--warning">
+        <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-alert"></use></svg>
+        <p>[[t:aiPage.noOfficial]]</p>
+      </div>
+    </section>
+
+    <section class="ai-answer__section">
+      <h3 class="ai-answer__section-title">[[t:aiPage.sections.explanation]]</h3>
+      <div class="answer-block answer-block--generated">
+        <p class="answer-block__label"><span class="status status--generated">[[t:js.ai.labels.generated]]</span></p>
+        <p data-slot="explanation"></p>
+        <p class="answer-block__note">[[t:aiPage.generatedNote]]</p>
+      </div>
+    </section>
+
+    <section class="ai-answer__section" data-slot="related-section">
+      <h3 class="ai-answer__section-title">[[t:aiPage.sections.related]]</h3>
+      <ul class="related-links" data-slot="related"></ul>
+    </section>
+
+    <section class="ai-answer__section" data-slot="sources-section">
+      <h3 class="ai-answer__section-title">[[t:aiPage.sections.sources]]</h3>
+      <ol class="source-list" data-slot="sources"></ol>
+    </section>
+
+    <div class="ai-answer__feedback" data-feedback-group>
+      <span>[[t:aiPage.feedback.question]]</span>
+      <button type="button" class="button button--sm" aria-pressed="false" data-feedback="up">
+        <svg class="icon icon--sm" aria-hidden="true" focusable="false"><use href="#i-thumbs-up"></use></svg>
+        [[t:aiPage.feedback.yes]]
+      </button>
+      <button type="button" class="button button--sm" aria-pressed="false" data-feedback="down">
+        <svg class="icon icon--sm" aria-hidden="true" focusable="false"><use href="#i-thumbs-down"></use></svg>
+        [[t:aiPage.feedback.no]]
+      </button>
+    </div>
+  </article>
+</template>
+
+<template data-template="ai-source">
+  <li>
+    <div>
+      <p class="source-list__title" data-slot="title"></p>
+      <p class="source-list__meta" data-slot="meta"></p>
+      <a class="text-link" rel="noopener" data-slot="link">
+        [[t:actions.viewOriginalSource]]
+        <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-external"></use></svg>
+        <span class="visually-hidden">[[t:a11y.externalLink]]</span>
+      </a>
+    </div>
+  </li>
+</template>
+
+<template data-template="ai-related">
+  <li>
+    <a data-slot="link">
+      <svg class="icon icon--sm" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg>
+      <span data-slot="title"></span>
+    </a>
+  </li>
+</template>
+
+<template data-template="ai-error">
+  <article class="ai-answer">
+    <p class="ai-answer__asked">[[t:aiPage.youAsked]]</p>
+    <h2 class="ai-answer__question" data-slot="question"></h2>
+    <div class="state state--error" role="alert">
+      <div class="state__icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-alert"></use></svg></div>
+      <h3 class="state__title">[[t:aiPage.error.title]]</h3>
+      <p class="state__text">[[t:aiPage.error.text]]</p>
+      <div class="state__actions">
+        <button type="button" class="button button--primary" data-action="retry">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-refresh"></use></svg>
+          [[t:actions.retry]]
+        </button>
+      </div>
+    </div>
+  </article>
+</template>

@@ -1,0 +1,56 @@
+<!-- Cookie consent (PDPA). consent.js shows the bar until a choice is saved, and the footer's "ตั้งค่าคุกกี้" button
+     reopens the settings. Without JavaScript nothing optional is ever set, so nothing is shown. -->
+<section class="cookie-bar" aria-labelledby="cookie-bar-title" hidden data-cookie-bar>
+  <span class="cookie-bar__icon" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-cookie"></use></svg></span>
+  <div class="cookie-bar__text">
+    <p class="cookie-bar__title" id="cookie-bar-title">[[t:cookies.title]]</p>
+    <p class="cookie-bar__lead">[[t:cookies.lead]] <a href="[[href:policies#cookies]]">[[t:cookies.policy]]</a></p>
+  </div>
+  <div class="cookie-bar__actions">
+    <button type="button" class="cookie-btn cookie-btn--link" data-cookie-open>[[t:cookies.settings]]</button>
+    <button type="button" class="cookie-btn cookie-btn--outline" data-cookie-necessary>[[t:cookies.necessaryOnly]]</button>
+    <button type="button" class="cookie-btn cookie-btn--primary" data-cookie-accept>[[t:cookies.acceptAll]]</button>
+  </div>
+</section>
+
+<dialog class="modal cookie-modal" aria-labelledby="cookie-modal-title" data-cookie-modal>
+  <form method="dialog" data-cookie-form>
+    <div class="modal__header">
+      <h2 class="cookie-modal__title" id="cookie-modal-title">[[t:cookies.modalTitle]]</h2>
+      <button type="submit" class="icon-button" value="cancel" formnovalidate>
+        <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-close"></use></svg>
+        <span class="visually-hidden">[[t:cookies.close]]</span>
+      </button>
+    </div>
+    <div class="modal__body">
+      <p class="cookie-modal__lead">[[t:cookies.modalLead]] <a href="[[href:policies#cookies]]">[[t:cookies.policy]]</a></p>
+      <ul class="cookie-options">
+        <li class="cookie-option">
+          <div class="cookie-option__text">
+            <p class="cookie-option__name" id="cookie-necessary-name">[[t:cookies.necessary.name]]</p>
+            <p class="cookie-option__desc">[[t:cookies.necessary.desc]]</p>
+          </div>
+          <span class="cookie-option__always">[[t:cookies.alwaysOn]]</span>
+        </li>
+        <li class="cookie-option">
+          <div class="cookie-option__text">
+            <p class="cookie-option__name" id="cookie-analytics-name">[[t:cookies.analytics.name]]</p>
+            <p class="cookie-option__desc" id="cookie-analytics-desc">[[t:cookies.analytics.desc]]</p>
+          </div>
+          <input class="cookie-switch" type="checkbox" role="switch" name="analytics" aria-labelledby="cookie-analytics-name" aria-describedby="cookie-analytics-desc">
+        </li>
+        <li class="cookie-option">
+          <div class="cookie-option__text">
+            <p class="cookie-option__name" id="cookie-functional-name">[[t:cookies.functional.name]]</p>
+            <p class="cookie-option__desc" id="cookie-functional-desc">[[t:cookies.functional.desc]]</p>
+          </div>
+          <input class="cookie-switch" type="checkbox" role="switch" name="functional" aria-labelledby="cookie-functional-name" aria-describedby="cookie-functional-desc">
+        </li>
+      </ul>
+    </div>
+    <div class="modal__footer">
+      <button type="submit" class="cookie-btn cookie-btn--outline" value="save">[[t:cookies.save]]</button>
+      <button type="submit" class="cookie-btn cookie-btn--primary" value="all">[[t:cookies.acceptAll]]</button>
+    </div>
+  </form>
+</dialog>

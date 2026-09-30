@@ -1,0 +1,20 @@
+<!-- Knowledge search. search.js wires ids, the suggestion listbox and keyboard support; without JS it submits to the results page. -->
+<form class="search-box" role="search" action="[[href:search]]" method="get" data-search-box>
+  <div class="search-box__field">
+    <svg class="icon search-box__icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg>
+    <input class="search-box__input" type="search" name="q" autocomplete="off" spellcheck="false" enterkeyhint="search" maxlength="120" aria-label="[[t:search.label]]" placeholder="[[t:search.placeholder]]" data-search-input>
+    <button type="button" class="icon-button search-box__clear" hidden data-search-clear>
+      <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-close"></use></svg>
+      <span class="visually-hidden">[[t:search.clear]]</span>
+    </button>
+    <button type="submit" class="button button--primary search-box__submit">
+      <svg class="icon search-box__submit-icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg>
+      <span class="search-box__submit-label">[[t:search.submit]]</span>
+    </button>
+  </div>
+  <div class="search-suggest" hidden data-search-panel>
+    <p class="search-suggest__status" data-search-status></p>
+    <ul class="search-suggest__list" role="listbox" aria-label="[[t:search.suggestions]]" data-search-listbox></ul>
+    <div class="search-suggest__footer" hidden data-search-footer></div>
+  </div>
+</form>

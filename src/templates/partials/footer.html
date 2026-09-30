@@ -1,0 +1,115 @@
+<!-- Background photo: assets/images/headers/footer.png (see the README there); the library photo shows until then. -->
+<footer class="site-footer theme-dark" data-site-footer [[hero:footer]]>
+  <!-- Top bar: the logo, and follow us on the right. -->
+  <div class="container footer-top">
+    <a class="footer-brand__id" href="[[href:home]]">
+      <img class="footer-logo" src="[[root]]assets/images/logo.png" width="430" height="134" alt="[[t:a11y.logoAlt]]" loading="lazy">
+    </a>
+    <div class="footer-follow">
+      <p class="footer-follow__label" id="footer-follow-title">[[t:footer.follow]]</p>
+      <ul class="footer-social" aria-labelledby="footer-follow-title">
+        <li>
+          <a href="[[c:external.youtube]]" rel="noopener">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-youtube"></use></svg>
+            <span class="visually-hidden">[[t:library.video.name]][[t:a11y.externalLink]]</span>
+          </a>
+        </li>
+        <li>
+          <a href="[[c:contact.messenger]]" rel="noopener">
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-messenger"></use></svg>
+            <span class="visually-hidden">Messenger ORST Chat[[t:a11y.externalLink]]</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Five equal columns: contact, three groups of links, the map. -->
+  <div class="container site-footer__main">
+    <section class="footer-group" aria-labelledby="footer-contact-title">
+      <h2 class="footer-heading" id="footer-contact-title">[[t:footer.contactTitle]]</h2>
+      <address class="footer-org__address">[[c:contact.address.@lang]]</address>
+      <ul class="footer-reach">
+        <li><a href="tel:[[c:contact.phoneHref]]"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"></use></svg><span><span class="visually-hidden">[[t:contact.phone]] </span><span class="number">[[c:contact.phoneDisplay]]</span></span></a></li>
+        <li><a href="mailto:[[c:contact.email]]"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"></use></svg><span><span class="visually-hidden">[[t:contact.email]] </span>[[c:contact.email]]</span></a></li>
+      </ul>
+    </section>
+
+    <section class="footer-group" aria-labelledby="footer-services-title" data-footer-group>
+      <h2 class="footer-heading" id="footer-services-title">[[t:footer.popular]]</h2>
+      <div class="footer-group__panel">
+        <ul class="footer-links">
+          <li><a href="[[href:dictionary]]">[[t:services.dictionary.name]]</a></li>
+          <li><a href="[[href:terminology]]">[[t:services.terminology.name]]</a></li>
+          <li><a href="[[href:transliteration]]">[[t:services.transliteration.name]]</a></li>
+          <li><a href="[[href:knowledge-ai]]" lang="en">ORST Knowledge AI</a></li>
+          <li><a href="[[href:publications]]">[[t:services.publications.name]]</a></li>
+          <li><a href="[[href:e-service]]">[[t:nav.eservice]]</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="footer-group" aria-labelledby="footer-about-title" data-footer-group>
+      <h2 class="footer-heading" id="footer-about-title">[[t:footer.aboutGroup]]</h2>
+      <div class="footer-group__panel">
+        <ul class="footer-links">
+          <li><a href="[[href:royal-society]]">[[t:nav.royalSociety]]</a></li>
+          <li><a href="[[href:about]]">[[t:nav.about]]</a></li>
+          <li><a href="[[href:news]]">[[t:nav.news]]</a></li>
+          <li><a href="[[href:procurement]]">[[t:footer.procurement]]</a></li>
+          <li><a href="[[href:transparency]]">[[t:nav.transparency]]</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="footer-group" aria-labelledby="footer-help-title" data-footer-group>
+      <h2 class="footer-heading" id="footer-help-title">[[t:footer.help]]</h2>
+      <div class="footer-group__panel">
+        <ul class="footer-links">
+          <li><a href="[[href:public-faq]]">[[t:footer.faq]]</a></li>
+          <li><a href="[[href:contact-complaints]]">[[t:footer.complaints]]</a></li>
+          <li><a href="[[href:contact]]">[[t:contact.allChannels]]</a></li>
+          <li><a href="[[href:sitemap]]">[[t:nav.sitemap]]</a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="footer-group" aria-labelledby="footer-map-title">
+      <h2 class="footer-heading" id="footer-map-title">[[t:footer.mapHeading]]</h2>
+      <!-- Google Maps is a third party, so it loads only after the visitor allows functional cookies
+           or presses "show map" (components.js). Until then a plain panel with a link out. -->
+      <figure class="footer-map" data-footer-map data-src="[[map-embed]]" data-title="[[t:footer.mapTitle]]">
+        <div class="footer-map__frame" data-footer-map-frame>
+          <div class="footer-map__placeholder">
+            <svg class="icon footer-map__pin" aria-hidden="true" focusable="false"><use href="#i-pin"></use></svg>
+            <button type="button" class="footer-map__show" data-footer-map-show>[[t:footer.mapShow]]</button>
+          </div>
+        </div>
+        <figcaption class="footer-map__caption">
+          <a class="footer-map__open" href="[[map-url]]" rel="noopener">[[t:footer.mapOpen]]<svg class="icon" aria-hidden="true" focusable="false"><use href="#i-external"></use></svg><span class="visually-hidden">[[t:a11y.externalLink]]</span></a>
+        </figcaption>
+      </figure>
+    </section>
+  </div>
+
+  <div class="site-footer__bottom">
+    <div class="container site-footer__bottom-inner">
+      <div class="footer-bottom__meta">
+        <p>© <span class="number">[[year]]</span> [[t:org.name]] [[t:footer.rights]]</p>
+        [[visitors]]
+      </div>
+      <ul class="footer-bottom__links">
+        <li><a href="[[href:policies#website-policy]]">[[t:footer.websiteShort]]</a></li>
+        <li><a href="[[href:policies#privacy]]">[[t:footer.privacyShort]]</a></li>
+        <li><a href="[[href:policies#cookies]]">[[t:footer.cookiesShort]]</a></li>
+        <li><a href="[[href:policies#security]]">[[t:footer.securityShort]]</a></li>
+        <li><a href="[[href:policies#copyright]]">[[t:footer.copyrightShort]]</a></li>
+        <li><a href="[[href:policies#disclaimer]]">[[t:footer.disclaimerShort]]</a></li>
+        <li><button type="button" class="footer-cookie-settings" data-cookie-settings>[[t:cookies.settings]]</button></li>
+      </ul>
+      <a class="footer-top-link" href="#top" data-back-to-top>
+        <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-up"></use></svg>
+        <span class="visually-hidden">[[t:a11y.backToTop]]</span>
+      </a>
+    </div>
+  </div>
+</footer>

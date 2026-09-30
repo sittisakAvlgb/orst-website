@@ -1,0 +1,93 @@
+{
+  "siteUrl": "https://www.orst.go.th",
+  "defaultLang": "th",
+  "languages": ["th", "en"],
+  "demoData": true,
+  "menuLinksDisabled": true,
+
+  "contact": {
+    "address": {
+      "th": "เลขที่ 120 หมู่ 3 ศูนย์ราชการเฉลิมพระเกียรติ 80 พรรษา 5 ธันวาคม 2550 (อาคารซี) กรุงเทพมหานคร 10210",
+      "en": "{{ORST_ADDRESS_EN}}"
+    },
+    "postalCode": "10210",
+    "messenger": "https://m.me/206167399441363",
+    "line": "{{ORST_LINE_URL}}",
+    "phoneDisplay": "02 141 1717",
+    "phoneHref": "+6621411717",
+    "fax": "{{ORST_FAX}}",
+    "email": "saraban@orst.go.th",
+    "publicationsEmail": "ribook@orst.go.th",
+    "webmasterEmail": "{{ORST_WEBMASTER_EMAIL}}",
+    "latitude": "{{ORST_LATITUDE}}",
+    "longitude": "{{ORST_LONGITUDE}}",
+    "mapQuery": "ราชบัณฑิตยสภา ศูนย์ราชการแจ้งวัฒนะ อาคารซี"
+  },
+
+  "visitorCount": 15578497,
+  "visitorCountAsOf": "2026-09-30",
+
+  "external": {
+    "dictionary": "https://dictionary.orst.go.th/",
+    "terminology": "https://coined-word.orst.go.th/",
+    "transliteration": "https://transliteration.orst.go.th/",
+    "gazetteer": "https://gazetteer.orst.go.th/",
+    "etest": "https://etest.orst.go.th/",
+    "encyclopedia": "https://lst.nectec.or.th/encyclopedia/",
+    "archive": "https://da3.thaidlt.org/",
+    "legacySite": "https://www.orst.go.th/",
+    "royalSociety": "https://royalsociety.go.th/",
+    "divisionMoralPolitical": "https://mps.royalsociety.go.th/",
+    "divisionScience": "https://science.royalsociety.go.th/",
+    "divisionArts": "https://arts.royalsociety.go.th/",
+    "signLanguage": "http://164.115.33.116/",
+    "youtube": "https://www.youtube.com/channel/UCFGKmCXh_pWaawbilPgZ69g"
+  },
+
+  "_linksNote": "Related websites, as linked from the \"เชื่อมโยงเว็บไซต์อื่น\" block on www.orst.go.th (2026-09-25).",
+  "links": {
+    "citizenGuide": "http://www.royin.go.th/?page_id=19692",
+    "ginfo": "http://www.oic.go.th/ginfo/",
+    "etda": "https://www.etda.or.th/iub/",
+    "complaints": "https://awards.opdc.go.th/",
+    "knowledgeCenter": "https://www.egov.go.th/th/e-government-service/381/",
+    "infoCenter": "http://www.oic.go.th/infocenter6/664/",
+    "nacc": "http://www.nacc.go.th/",
+    "naccLearning": "https://www.nacc.go.th/category/20180831184638527/list?",
+    "oath": "https://web.ocsc.go.th/forking/"
+  },
+
+  "_legacyNote": "Interim destinations on the current official website, taken from links published on www.orst.go.th (2026-09-11; rules pages and the sign-language dictionary 2026-09-25). Replace each with the new page once it exists.",
+  "legacy": {
+    "strategicPlan": "https://www.orst.go.th/iwfm_list.asp?p=ATP-SGP&s=1",
+    "actionPlan": "https://www.orst.go.th/iwfm_list.asp?p=ATP-AAP&s=1",
+    "laws": "https://www.orst.go.th/iwfm_list.asp?p=ATP-RDL&s=1",
+    "serviceStandards": "https://www.orst.go.th/iwfm_table.asp?a=20",
+    "riskManagement": "https://www.orst.go.th/iwfm_list.asp?p=ATP-RMP&s=1",
+    "internalAudit": "https://www.orst.go.th/iwfm_table.asp?a=16",
+    "publicInformation": "https://www.orst.go.th/iwfm_table.asp?a=8",
+    "complaints": "https://www.orst.go.th/iwfm_mb.asp",
+    "antiCorruption": "https://www.orst.go.th/iwfm_table.asp?a=9",
+    "procurementNotices": "https://www.orst.go.th/iwfm_table.asp?a=2",
+    "procurementResults": "https://www.orst.go.th/iwfm_table.asp?a=3",
+    "referencePrices": "https://www.orst.go.th/iwfm_table.asp?a=4",
+    "procurementPlan": "https://www.orst.go.th/iwfm_table.asp?a=39",
+    "history": "https://www.orst.go.th/iwfm_list.asp?p=ABOUT-HISTORY-ORS",
+    "vision": "https://www.orst.go.th/iwfm_list.asp?p=ABOUT-VISION",
+    "orgChart": "https://www.orst.go.th/iwfm_list.asp?p=ABOUT-ORGCHART&s=0",
+    "executives": "https://www.orst.go.th/iwfm_list.asp?p=ABOUT-EXC",
+    "emblem": "https://www.orst.go.th/iwfm_list.asp?p=ABOUT-EMB",
+    "ebooks": "https://www.orst.go.th/iwfm_list.asp?u=6",
+    "rules": "https://www.orst.go.th/iwfm_table.asp?a=36",
+    "punctuation": "https://www.orst.go.th/iwfm_table.asp?a=36&i=0040002104011001%2F63ERK0249069",
+    "romanization": "https://www.orst.go.th/iwfm_table.asp?a=36&i=0040002104011001%2F63ERJ5814038",
+    "placeNames": "https://www.orst.go.th/iwfm_table.asp?a=36&i=0040002104011001%2F63ERK0503006",
+    "infographics": "https://www.orst.go.th/iwfm_list.asp?u=11",
+    "knowledgeArchive": "https://www.orst.go.th/iwfm_table.asp?a=28",
+    "qa": "https://www.orst.go.th/iwfm_qa.asp",
+    "calendar": "https://www.orst.go.th/iwfm_calendar.asp",
+    "pressReleases": "https://www.orst.go.th/iwfm_list.asp?n=g",
+    "activityNews": "https://www.orst.go.th/iwfm_list.asp?n=a",
+    "lectures": "https://www.orst.go.th/iwfm_table.asp?a=23"
+  }
+}

@@ -1,0 +1,108 @@
+<div class="page-header">
+  <div class="container">
+    [[breadcrumb]]
+    <div class="page-header__body">
+      <p class="eyebrow">[[t:nav.knowledge]]</p>
+      <h1>[[t:services.@service.name]]</h1>
+      <p class="lead">[[t:services.@service.intro]]</p>
+      <div class="service-page__search search-lg" data-search-scope="[[data:service]]">
+        [[include:search-form]]
+      </div>
+      <a class="text-link service-page__external" href="[[c:external.@service]]" rel="noopener">
+        [[t:services.@service.external]]
+        <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-external"></use></svg>
+        <span class="visually-hidden">[[t:a11y.externalLink]]</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container grid-12">
+    <div class="span-8 stack stack--40">
+      <section aria-labelledby="browse-title">
+        <div class="content-section__head stack stack--8">
+          <h2 class="h2-ui" id="browse-title">[[t:servicePage.browseTitle]]</h2>
+          <p class="text-secondary">[[t:servicePage.browseLead]]</p>
+        </div>
+        [[include:alphabet-@alphabet]]
+      </section>
+
+      <section aria-labelledby="howto-title">
+        <div class="content-section__head">
+          <h2 class="h2-ui" id="howto-title">[[t:servicePage.howToTitle]]</h2>
+        </div>
+        <div class="accordion" data-accordion>
+          <div class="accordion__item">
+            <h3 class="accordion__heading">
+              <button type="button" class="accordion__trigger" id="faq-modes-trigger" aria-expanded="true" aria-controls="faq-modes">
+                [[t:servicePage.faq.modes.q]]
+                <span class="accordion__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="accordion__panel" id="faq-modes" role="region" aria-labelledby="faq-modes-trigger">
+              <p class="text-secondary">[[t:servicePage.faq.modes.a]]</p>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <h3 class="accordion__heading">
+              <button type="button" class="accordion__trigger" id="faq-notfound-trigger" aria-expanded="true" aria-controls="faq-notfound">
+                [[t:servicePage.faq.notFound.q]]
+                <span class="accordion__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="accordion__panel" id="faq-notfound" role="region" aria-labelledby="faq-notfound-trigger">
+              <p class="text-secondary">[[t:servicePage.faq.notFound.a]]</p>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <h3 class="accordion__heading">
+              <button type="button" class="accordion__trigger" id="faq-source-trigger" aria-expanded="true" aria-controls="faq-source">
+                [[t:servicePage.faq.source.q]]
+                <span class="accordion__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="accordion__panel" id="faq-source" role="region" aria-labelledby="faq-source-trigger">
+              <p class="text-secondary">[[t:services.@service.sourceNote]]</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <aside class="span-4 stack stack--24" aria-label="[[t:servicePage.asideLabel]]">
+      <div class="aside-panel">
+        <h2 class="h4">[[t:servicePage.aboutTitle]]</h2>
+        <dl class="fact-list">
+          <div><dt>[[t:servicePage.facts.source]]</dt><dd>[[t:services.@service.source]]</dd></div>
+          <div><dt>[[t:servicePage.facts.searchModes]]</dt><dd>[[t:servicePage.facts.searchModesValue]]</dd></div>
+          <div><dt>[[t:servicePage.facts.maintainer]]</dt><dd>[[t:org.name]]</dd></div>
+        </dl>
+        <a class="button button--block" href="[[c:external.@service]]" rel="noopener">
+          [[t:actions.openFullDatabase]]
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-external"></use></svg>
+          <span class="visually-hidden">[[t:a11y.externalLink]]</span>
+        </a>
+      </div>
+
+      <div class="aside-panel">
+        <h2 class="h4">[[t:servicePage.askTitle]]</h2>
+        <p class="text-sm text-secondary">[[t:servicePage.askText]]</p>
+        <a class="button button--primary button--block" href="[[href:knowledge-ai]]">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-ask"></use></svg>
+          [[t:actions.askAi]]
+        </a>
+      </div>
+
+      <nav class="aside-panel" aria-labelledby="related-services-title">
+        <h2 class="h4" id="related-services-title">[[t:servicePage.relatedTitle]]</h2>
+        <ul class="related-links">
+          <li><a href="[[href:dictionary]]"[[aria-current:dictionary]]>[[t:services.dictionary.name]]</a></li>
+          <li><a href="[[href:terminology]]"[[aria-current:terminology]]>[[t:services.terminology.name]]</a></li>
+          <li><a href="[[href:transliteration]]"[[aria-current:transliteration]]>[[t:services.transliteration.name]]</a></li>
+          <li><a href="[[href:search]]">[[t:megaMenu.knowledge.searchAll]]</a></li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+</div>

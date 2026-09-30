@@ -1,0 +1,90 @@
+<div class="page-header">
+  <div class="container">
+    [[breadcrumb]]
+    <div class="page-header__body">
+      <h1>[[t:pages.contact.title]]</h1>
+      <p class="lead">[[t:pages.contact.lead]]</p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container contact-grid">
+    <section aria-labelledby="contact-details-title">
+      <h2 class="h2-ui content-section__head" id="contact-details-title">[[t:contactPage.detailsTitle]]</h2>
+      <address>
+        <dl class="contact-list">
+          <div>
+            <dt>[[t:contact.organization]]</dt>
+            <dd><span lang="th">[[t:org.nameTh]]</span><br><span lang="en">[[t:org.nameEn]]</span></dd>
+          </div>
+          <div>
+            <dt>[[t:contact.address]]</dt>
+            <dd>[[c:contact.address.@lang]]</dd>
+          </div>
+          <div>
+            <dt>[[t:contact.phone]]</dt>
+            <dd><a class="number" href="tel:[[c:contact.phoneHref]]">[[c:contact.phoneDisplay]]</a></dd>
+          </div>
+          <div>
+            <dt>[[t:contact.fax]]</dt>
+            <dd><span class="number">[[c:contact.fax]]</span></dd>
+          </div>
+          <div>
+            <dt>[[t:contact.email]]</dt>
+            <dd><a href="mailto:[[c:contact.email]]">[[c:contact.email]]</a></dd>
+          </div>
+          <div>
+            <dt>[[t:contact.publicationsEmail]]</dt>
+            <dd><a href="mailto:[[c:contact.publicationsEmail]]">[[c:contact.publicationsEmail]]</a></dd>
+          </div>
+          <div>
+            <dt>[[t:contact.webmaster]]</dt>
+            <dd><a href="mailto:[[c:contact.webmasterEmail]]">[[c:contact.webmasterEmail]]</a></dd>
+          </div>
+          <div>
+            <dt>[[t:contact.coordinates]]</dt>
+            <dd class="coordinates">[[t:contact.latitude]] [[c:contact.latitude]] · [[t:contact.longitude]] [[c:contact.longitude]]</dd>
+          </div>
+          <div>
+            <dt>[[t:contact.officeHours]]</dt>
+            <dd>{{ORST_OFFICE_HOURS}}</dd>
+          </div>
+        </dl>
+      </address>
+      <div class="action-row">
+        <a class="button button--primary" href="tel:[[c:contact.phoneHref]]">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"></use></svg>
+          [[t:contact.call]]
+        </a>
+        <a class="button" href="mailto:[[c:contact.email]]">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"></use></svg>
+          [[t:contact.sendEmail]]
+        </a>
+        <a class="text-link" href="[[map-url]]" rel="noopener">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-pin"></use></svg>
+          [[t:contact.viewMap]]<span class="visually-hidden">[[t:a11y.externalLink]]</span>
+        </a>
+      </div>
+    </section>
+
+    <aside class="stack stack--24" aria-label="[[t:contactPage.otherTitle]]">
+      <div class="aside-panel">
+        <h2 class="h4">[[t:contactPage.mapTitle]]</h2>
+        <!-- Replace with a static map image or lightweight map once coordinates are confirmed -->
+        <div class="image-placeholder image-placeholder--4x3" aria-hidden="true">Map</div>
+        <p class="text-sm text-secondary">[[t:contactPage.mapNote]]</p>
+      </div>
+
+      <nav class="aside-panel" aria-labelledby="contact-other-title">
+        <h2 class="h4" id="contact-other-title">[[t:contactPage.otherTitle]]</h2>
+        <ul class="related-links">
+          <li><a href="[[href:knowledge-ai]]">[[t:services.ai.name]]</a></li>
+          <li><a href="[[c:legacy.qa]]" rel="noopener">[[t:services.qa.name]]<span class="visually-hidden">[[t:a11y.externalLink]]</span></a></li>
+          <li><a href="[[c:legacy.complaints]]" rel="noopener">[[t:transparency.links.complaints]]<span class="visually-hidden">[[t:a11y.externalLink]]</span></a></li>
+          <li><a href="[[c:external.youtube]]" rel="noopener">[[t:library.video.name]]<span class="visually-hidden">[[t:a11y.externalLink]]</span></a></li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+</div>

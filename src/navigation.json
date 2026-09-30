@@ -1,0 +1,304 @@
+{
+  "_help": "เมนูหลักของเว็บไซต์ (header, เมนูมือถือ, ผังเว็บไซต์) — รายการที่มี path จะถูกสร้างเป็นหน้าเว็บอัตโนมัติ (ยังไม่มีเนื้อหา) ส่วน link ชี้ไปยังหน้าที่มีอยู่แล้ว: page = รหัสหน้าใน pages.json, external/legacy = คีย์ใน site.config.json; currentSite = ลิงก์ 'อ่านข้อมูลบนเว็บไซต์ปัจจุบัน' ในหน้าที่สร้าง",
+  "menus": [
+    {
+      "id": "home",
+      "labelKey": "nav.home",
+      "icon": "i-home",
+      "iconOnly": true,
+      "section": "home",
+      "link": { "page": "home" }
+    },
+    {
+      "id": "royal-society-menu",
+      "icon": "i-members",
+      "shortcutFrom": 1440,
+      "labelKey": "nav.royalSociety",
+      "section": "royal-society",
+      "link": { "page": "royal-society" },
+      "introKey": "megaMenu.royalSociety.desc",
+      "children": [
+        {
+          "id": "rs-executives",
+          "label": { "th": "ผู้บริหารราชบัณฑิตยสภา", "en": "Royal Society executives" },
+          "path": "royal-society/executives/",
+          "children": [
+            { "id": "rs-executives-current", "label": { "th": "ผู้บริหารชุดปัจจุบัน", "en": "Current executives" }, "path": "royal-society/executives/current/" },
+            { "id": "rs-presidents", "label": { "th": "ทำเนียบนายกราชบัณฑิตยสภา", "en": "Past presidents of the Royal Society" }, "path": "royal-society/executives/presidents/" }
+          ]
+        },
+        {
+          "id": "rs-roles",
+          "label": { "th": "บทบาทและการดำเนินงาน", "en": "Roles and operations" },
+          "path": "royal-society/roles/",
+          "children": [
+            { "id": "rs-authority", "label": { "th": "อำนาจหน้าที่", "en": "Powers and duties" }, "path": "royal-society/roles/authority/" },
+            { "id": "rs-direction", "label": { "th": "ทิศทางและการดำเนินงาน", "en": "Direction and operations" }, "path": "royal-society/roles/direction/" },
+            { "id": "rs-administrative-chart", "label": { "th": "แผนผังการบริหาร", "en": "Administrative chart" }, "path": "royal-society/roles/administrative-chart/" }
+          ]
+        },
+        {
+          "id": "rs-members",
+          "label": { "th": "ราชบัณฑิตและภาคีสมาชิก", "en": "Fellows and associate members" },
+          "link": { "page": "royal-society", "hash": "members" }
+        },
+        {
+          "id": "rs-academic-activities",
+          "label": { "th": "กิจกรรมวิชาการ", "en": "Academic activities" },
+          "path": "royal-society/academic-activities/",
+          "currentSite": "lectures"
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "icon": "i-landmark",
+      "labelKey": "nav.about",
+      "section": "about",
+      "path": "about/",
+      "introKey": "megaMenu.about.desc",
+      "children": [
+        {
+          "id": "about-organization",
+          "label": { "th": "ข้อมูลองค์กร", "en": "Organisation" },
+          "path": "about/organization/",
+          "children": [
+            { "id": "about-history", "label": { "th": "ประวัติความเป็นมา", "en": "History" }, "path": "about/organization/history/", "currentSite": "history" },
+            { "id": "about-vision", "label": { "th": "วิสัยทัศน์ พันธกิจ ค่านิยม", "en": "Vision, mission and values" }, "path": "about/organization/vision/", "currentSite": "vision" },
+            { "id": "about-authority", "label": { "th": "อำนาจหน้าที่", "en": "Powers and duties" }, "path": "about/organization/authority/" },
+            { "id": "about-structure", "label": { "th": "โครงสร้างและการแบ่งส่วนราชการ", "en": "Structure and divisions" }, "path": "about/organization/structure/", "currentSite": "orgChart" },
+            { "id": "about-emblem", "label": { "th": "เครื่องหมายราชการ", "en": "Official emblem" }, "path": "about/organization/emblem/", "currentSite": "emblem" }
+          ]
+        },
+        {
+          "id": "about-people",
+          "label": { "th": "ผู้บริหารและบุคลากร", "en": "Executives and staff" },
+          "path": "about/people/",
+          "children": [
+            { "id": "about-executives", "label": { "th": "ผู้บริหารสำนักงาน", "en": "Office executives" }, "path": "about/people/executives/", "currentSite": "executives" },
+            { "id": "about-cio", "label": { "th": "ผู้บริหารเทคโนโลยีสารสนเทศระดับสูง (CIO)", "en": "Chief Information Officer (CIO)" }, "path": "about/people/cio/" },
+            { "id": "about-cio-it-management", "label": { "th": "การบริหารงานเทคโนโลยีสารสนเทศของ CIO", "en": "IT management by the CIO" }, "path": "about/people/cio-it-management/" },
+            { "id": "about-committees", "label": { "th": "คณะกรรมการวิชาการและกรรมการอื่น", "en": "Academic and other committees" }, "path": "about/people/committees/" },
+            { "id": "about-workforce", "label": { "th": "โครงสร้างบุคลากรและอัตรากำลัง", "en": "Staff structure and workforce" }, "path": "about/people/workforce/" }
+          ]
+        },
+        {
+          "id": "about-anti-corruption",
+          "label": { "th": "ศูนย์ปฏิบัติการต่อต้านการทุจริต", "en": "Anti-Corruption Operation Centre" },
+          "path": "about/anti-corruption/",
+          "children": [
+            { "id": "about-anti-corruption-performance", "label": { "th": "ข้อมูลและผลการดำเนินงาน", "en": "Information and performance" }, "path": "about/anti-corruption/performance/", "currentSite": "antiCorruption" },
+            { "id": "about-report-corruption", "label": { "th": "แจ้งเบาะแสการทุจริต", "en": "Report corruption" }, "path": "about/anti-corruption/report/", "currentSite": "complaints" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "plans",
+      "icon": "i-chart",
+      "label": { "th": "แผนงานและผลการดำเนินงาน", "en": "Plans and performance" },
+      "section": "plans",
+      "path": "plans/",
+      "intro": { "th": "ยุทธศาสตร์ แผนงาน งบประมาณ และรายงานผลการดำเนินงานของสำนักงาน", "en": "Strategy, plans, budget and performance reports of the Office." },
+      "children": [
+        {
+          "id": "plans-strategy",
+          "label": { "th": "ยุทธศาสตร์และแผนงาน", "en": "Strategy and plans" },
+          "path": "plans/strategy/",
+          "children": [
+            { "id": "plans-strategic-plan", "label": { "th": "แผนยุทธศาสตร์และแผนปฏิบัติราชการ 5 ปี", "en": "Five-year strategic and action plan" }, "path": "plans/strategy/strategic-plan/", "currentSite": "strategicPlan" },
+            { "id": "plans-annual-action-plan", "label": { "th": "แผนปฏิบัติราชการประจำปี", "en": "Annual action plan" }, "path": "plans/strategy/annual-action-plan/", "currentSite": "actionPlan" },
+            { "id": "plans-budget", "label": { "th": "งบประมาณรายจ่ายประจำปี", "en": "Annual expenditure budget" }, "path": "plans/strategy/budget/" },
+            { "id": "plans-it-master-plan", "label": { "th": "แผนแม่บทเทคโนโลยีสารสนเทศ", "en": "Information technology master plan" }, "path": "plans/strategy/it-master-plan/" },
+            { "id": "plans-risk-continuity", "label": { "th": "แผนบริหารความเสี่ยงและความต่อเนื่อง", "en": "Risk management and business continuity plan" }, "path": "plans/strategy/risk-continuity/", "currentSite": "riskManagement" },
+            { "id": "plans-energy-saving", "label": { "th": "แผนและมาตรการประหยัดพลังงาน", "en": "Energy-saving plan and measures" }, "path": "plans/strategy/energy-saving/" }
+          ]
+        },
+        {
+          "id": "plans-reports",
+          "label": { "th": "รายงานผลการดำเนินงาน", "en": "Performance reports" },
+          "path": "plans/reports/",
+          "children": [
+            { "id": "plans-monthly-performance", "label": { "th": "ผลการปฏิบัติราชการรายเดือน", "en": "Monthly performance" }, "path": "plans/reports/monthly/" },
+            { "id": "plans-performance-agreement", "label": { "th": "รายงานผลตามคำรับรองการปฏิบัติราชการ", "en": "Performance agreement report" }, "path": "plans/reports/performance-agreement/" },
+            { "id": "plans-unit-cost", "label": { "th": "รายงานต้นทุนต่อหน่วยผลผลิต", "en": "Unit cost of outputs report" }, "path": "plans/reports/unit-cost/" },
+            { "id": "plans-annual-report", "label": { "th": "รายงานประจำปี", "en": "Annual report" }, "path": "plans/reports/annual/" },
+            { "id": "plans-internal-audit", "label": { "th": "รายงานการตรวจสอบภายใน", "en": "Internal audit report" }, "path": "plans/reports/internal-audit/", "currentSite": "internalAudit" }
+          ]
+        },
+        {
+          "id": "plans-staff",
+          "label": { "th": "สำหรับเจ้าหน้าที่", "en": "For staff" },
+          "path": "plans/staff/",
+          "children": [
+            { "id": "plans-staff-e-office", "label": { "th": "ระบบสำนักงานอิเล็กทรอนิกส์", "en": "Electronic office system" }, "path": "plans/staff/e-office/" },
+            { "id": "plans-staff-hr", "label": { "th": "ระบบสารสนเทศทรัพยากรบุคคลระดับกรม", "en": "Departmental human resource information system" }, "path": "plans/staff/hr-information/" },
+            { "id": "plans-staff-workd", "label": { "th": "ระบบการสื่อสารแบบรวมศูนย์ (WorkD Platform)", "en": "Unified communication system (WorkD Platform)" }, "path": "plans/staff/workd/" },
+            { "id": "plans-staff-it-service", "label": { "th": "ศูนย์บริการสารสนเทศ", "en": "Information service centre" }, "path": "plans/staff/it-service/" },
+            { "id": "plans-staff-forms", "label": { "th": "แบบฟอร์มสำหรับเจ้าหน้าที่", "en": "Staff forms" }, "path": "plans/staff/forms/" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "public-services",
+      "icon": "i-clipboard",
+      "shortcut": true,
+      "label": { "th": "บริการประชาชน", "en": "Public services" },
+      "section": "public-services",
+      "path": "public-services/",
+      "intro": { "th": "คู่มือ บริการออนไลน์ แบบฟอร์ม และคำถามที่พบบ่อยสำหรับประชาชน", "en": "Guides, online services, forms and FAQs for the public." },
+      "children": [
+        { "id": "public-citizen-manual", "label": { "th": "คู่มือสำหรับประชาชน", "en": "Citizen's manual" }, "path": "public-services/citizen-manual/" },
+        {
+          "id": "public-eservice",
+          "label": { "th": "บริการออนไลน์ (e-Service)", "en": "Online services (e-Service)" },
+          "link": { "page": "e-service" },
+          "children": [
+            { "id": "eservice-publishing-permission", "label": { "th": "ขออนุญาตจัดพิมพ์และเผยแพร่", "en": "Permission to print and publish" }, "path": "e-service/publishing-permission/" },
+            { "id": "eservice-rights-permission", "label": { "th": "ขออนุญาตใช้สิทธิในการจัดพิมพ์", "en": "Permission to use publishing rights" }, "path": "e-service/rights-permission/" },
+            { "id": "eservice-request-status", "label": { "th": "ติดตามสถานะคำขอ", "en": "Track request status" }, "path": "e-service/request-status/" },
+            { "id": "eservice-register", "label": { "th": "ลงทะเบียนและเข้าสู่ระบบ", "en": "Register and sign in" }, "path": "e-service/register/" }
+          ]
+        },
+        { "id": "public-forms", "label": { "th": "ดาวน์โหลดแบบฟอร์ม", "en": "Download forms" }, "path": "public-services/forms/" },
+        { "id": "public-service-standards", "label": { "th": "มาตรฐานระยะเวลาการให้บริการ", "en": "Service time standards" }, "path": "public-services/service-standards/", "currentSite": "serviceStandards" },
+        { "id": "public-faq", "label": { "th": "คำถามที่พบบ่อย (FAQ)", "en": "Frequently asked questions (FAQ)" }, "path": "public-services/faq/", "currentSite": "qa" }
+      ]
+    },
+    {
+      "id": "knowledge-menu",
+      "icon": "i-dictionary",
+      "shortcut": true,
+      "labelKey": "nav.knowledge",
+      "section": "knowledge",
+      "link": { "page": "knowledge" },
+      "introKey": "megaMenu.knowledge.desc",
+      "children": [
+        {
+          "id": "knowledge-dictionaries",
+          "label": { "th": "พจนานุกรมและฐานข้อมูลศัพท์", "en": "Dictionaries and term databases" },
+          "path": "knowledge/dictionaries/",
+          "children": [
+            { "id": "menu-search", "label": { "th": "ค้นรวมทุกฐานข้อมูลจากช่องเดียว", "en": "Search every database at once" }, "link": { "page": "search" } },
+            { "id": "menu-dictionary", "label": { "th": "พจนานุกรม ฉบับราชบัณฑิตยสถาน พ.ศ. ๒๕๕๔", "en": "Royal Institute Dictionary, B.E. 2554 (2011)" }, "link": { "page": "dictionary" } },
+            { "id": "menu-terminology", "label": { "th": "ศัพท์บัญญัติ", "en": "Technical terms" }, "link": { "page": "terminology" } },
+            { "id": "menu-transliteration", "label": { "th": "คำทับศัพท์", "en": "Transliteration" }, "link": { "page": "transliteration" } },
+            { "id": "menu-gazetteer", "label": { "th": "อักขรานุกรมภูมิศาสตร์ไทย", "en": "Thai gazetteer" }, "link": { "external": "gazetteer" } },
+            { "id": "knowledge-sign-language", "label": { "th": "พจนานุกรมภาษามือไทย", "en": "Thai Sign Language Dictionary" }, "path": "knowledge/dictionaries/thai-sign-language/" },
+            { "id": "menu-encyclopedia", "label": { "th": "สารานุกรมและอนุกรมวิธาน", "en": "Encyclopedia and taxonomy" }, "link": { "external": "encyclopedia" } }
+          ]
+        },
+        {
+          "id": "knowledge-collections",
+          "label": { "th": "คลังความรู้และสิ่งพิมพ์", "en": "Knowledge and publications" },
+          "path": "knowledge/collections/",
+          "children": [
+            { "id": "menu-library", "label": { "th": "คลังความรู้", "en": "Knowledge collection" }, "link": { "page": "library" } },
+            { "id": "knowledge-ebooks", "label": { "th": "หนังสืออิเล็กทรอนิกส์ (e-Book)", "en": "E-books" }, "path": "knowledge/collections/e-books/", "currentSite": "ebooks" },
+            { "id": "menu-publications", "label": { "th": "หนังสือและสิ่งพิมพ์จำหน่าย", "en": "Books and publications for sale" }, "link": { "page": "publications" } },
+            { "id": "knowledge-ordering", "label": { "th": "วิธีสั่งซื้อและชำระเงิน", "en": "How to order and pay" }, "path": "knowledge/collections/ordering/" },
+            { "id": "knowledge-infographics", "label": { "th": "อินโฟกราฟิก", "en": "Infographics" }, "path": "knowledge/collections/infographics/", "currentSite": "infographics" },
+            { "id": "knowledge-dialects", "label": { "th": "เสียงภาษาถิ่นและระบบเขียน", "en": "Dialect sounds and writing systems" }, "path": "knowledge/collections/dialects/" },
+            { "id": "knowledge-usage-rules", "label": { "th": "หลักเกณฑ์การใช้ภาษาไทย", "en": "Thai language usage rules" }, "path": "knowledge/collections/usage-rules/" }
+          ]
+        },
+        {
+          "id": "knowledge-learning",
+          "label": { "th": "เรียนรู้ออนไลน์", "en": "Online learning" },
+          "path": "knowledge/learning/",
+          "children": [
+            { "id": "knowledge-thai-lessons", "label": { "th": "บทเรียนภาษาไทยออนไลน์", "en": "Online Thai lessons" }, "path": "knowledge/learning/thai-lessons/" },
+            { "id": "menu-etest", "label": { "th": "ทดสอบความรู้ภาษาไทย", "en": "Thai language test" }, "link": { "external": "etest" } },
+            { "id": "knowledge-learning-media", "label": { "th": "คลังวิดีโอและสื่อการเรียนรู้", "en": "Video and learning media library" }, "path": "knowledge/learning/media/" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "news-menu",
+      "icon": "i-newspaper",
+      "shortcut": true,
+      "labelKey": "nav.news",
+      "section": "news",
+      "link": { "page": "news" },
+      "introKey": "megaMenu.news.desc",
+      "overviewKey": "megaMenu.news.overview",
+      "children": [
+        { "id": "menu-press-releases", "label": { "th": "ข่าวประชาสัมพันธ์", "en": "Press releases" }, "link": { "page": "news", "query": "category=announcement" } },
+        { "id": "menu-activities", "label": { "th": "ข่าวกิจกรรม", "en": "Activity news" }, "link": { "page": "news", "query": "category=activity" } },
+        { "id": "menu-lectures", "label": { "th": "การบรรยายทางวิชาการ", "en": "Academic lectures" }, "link": { "page": "news", "query": "category=lecture" } },
+        { "id": "news-calendar", "label": { "th": "ปฏิทินกิจกรรม", "en": "Activity calendar" }, "path": "news/calendar/", "currentSite": "calendar" },
+        { "id": "news-gallery", "label": { "th": "คลังภาพและวิดีโอ", "en": "Photo and video gallery" }, "path": "news/gallery/" },
+        { "id": "news-subscribe", "label": { "th": "สมัครรับข่าวสาร", "en": "Subscribe to news" }, "path": "news/subscribe/" },
+        { "id": "news-rss", "label": { "th": "RSS ข่าวสาร", "en": "RSS feeds" }, "path": "news/rss/" }
+      ]
+    },
+    {
+      "id": "procurement",
+      "icon": "i-megaphone",
+      "shortcutFrom": 1600,
+      "label": { "th": "ประกาศและจัดซื้อจัดจ้าง", "en": "Notices & procurement" },
+      "section": "procurement",
+      "path": "procurement/",
+      "intro": { "th": "แผน ประกาศ และผลการจัดซื้อจัดจ้าง ประกาศรับสมัครงาน และข่าวสารทางราชการ", "en": "Procurement plans, notices and results, job vacancies and official announcements." },
+      "children": [
+        { "id": "procurement-plan", "label": { "th": "แผนการจัดซื้อจัดจ้าง", "en": "Procurement plan" }, "path": "procurement/plan/", "currentSite": "procurementPlan" },
+        { "id": "procurement-notices", "label": { "th": "ประกาศจัดซื้อจัดจ้างและราคากลาง", "en": "Procurement notices and reference prices" }, "path": "procurement/notices/", "currentSite": "procurementNotices" },
+        { "id": "procurement-results", "label": { "th": "ผลการจัดซื้อจัดจ้าง", "en": "Procurement results" }, "path": "procurement/results/", "currentSite": "procurementResults" },
+        { "id": "procurement-summary", "label": { "th": "สรุปผลรายเดือนและรายไตรมาส", "en": "Monthly and quarterly summaries" }, "path": "procurement/summary/" },
+        { "id": "procurement-contracts", "label": { "th": "ประกาศเผยแพร่สัญญา", "en": "Contract disclosures" }, "path": "procurement/contracts/" },
+        { "id": "procurement-auctions", "label": { "th": "ประกาศขายทอดตลาด", "en": "Auction notices" }, "path": "procurement/auctions/" },
+        { "id": "procurement-jobs", "label": { "th": "ประกาศรับสมัครงาน", "en": "Job vacancies" }, "path": "procurement/jobs/" },
+        { "id": "procurement-official-news", "label": { "th": "ข่าวสารทางราชการ", "en": "Official announcements" }, "path": "procurement/official-news/" }
+      ]
+    },
+    {
+      "id": "transparency-menu",
+      "icon": "i-official",
+      "labelKey": "nav.transparency",
+      "section": "transparency",
+      "link": { "page": "transparency" },
+      "intro": { "th": "ข้อมูลข่าวสารที่หน่วยงานเปิดเผยต่อสาธารณะ การประเมิน ITA และการป้องกันการทุจริต", "en": "Information the Office discloses to the public, the ITA assessment and anti-corruption work." },
+      "children": [
+        { "id": "transparency-information-centre", "label": { "th": "ศูนย์ข้อมูลข่าวสาร", "en": "Official Information Centre" }, "path": "transparency/information-centre/", "currentSite": "publicInformation" },
+        { "id": "transparency-open-data", "label": { "th": "ข้อมูลเปิดภาครัฐ (Open Data)", "en": "Open government data (Open Data)" }, "path": "transparency/open-data/" },
+        { "id": "transparency-data-catalogue", "label": { "th": "บัญชีข้อมูลของหน่วยงาน", "en": "Data catalogue" }, "path": "transparency/data-catalogue/" },
+        { "id": "menu-ita", "label": { "th": "การประเมินคุณธรรมและความโปร่งใส (ITA)", "en": "Integrity and Transparency Assessment (ITA)" }, "link": { "page": "transparency", "hash": "ita" } },
+        { "id": "transparency-ethics", "label": { "th": "ประมวลจริยธรรม", "en": "Code of ethics" }, "path": "transparency/code-of-ethics/" },
+        { "id": "transparency-anti-corruption", "label": { "th": "การป้องกันและปราบปรามการทุจริต", "en": "Preventing and suppressing corruption" }, "path": "transparency/anti-corruption/", "currentSite": "antiCorruption" }
+      ]
+    },
+    {
+      "id": "laws",
+      "icon": "i-scale",
+      "label": { "th": "กฎหมายและระเบียบ", "en": "Laws & regulations" },
+      "section": "laws",
+      "path": "laws/",
+      "intro": { "th": "กฎหมาย ระเบียบ มติคณะรัฐมนตรี และแนวปฏิบัติที่เกี่ยวข้องกับสำนักงาน", "en": "Laws, regulations, Cabinet resolutions and guidelines that apply to the Office." },
+      "children": [
+        { "id": "laws-acts", "label": { "th": "พระราชบัญญัติและพระราชกฤษฎีกา", "en": "Acts and royal decrees" }, "path": "laws/acts/", "currentSite": "laws" },
+        { "id": "laws-regulations", "label": { "th": "ข้อบังคับ ระเบียบ และประกาศ", "en": "Rules, regulations and notifications" }, "path": "laws/regulations/" },
+        { "id": "laws-cabinet-resolutions", "label": { "th": "มติคณะรัฐมนตรีที่เกี่ยวข้อง", "en": "Relevant Cabinet resolutions" }, "path": "laws/cabinet-resolutions/" },
+        { "id": "laws-guidelines", "label": { "th": "คู่มือและแนวปฏิบัติ", "en": "Manuals and guidelines" }, "path": "laws/guidelines/" }
+      ]
+    },
+    {
+      "id": "contact-menu",
+      "icon": "i-ask",
+      "shortcut": true,
+      "label": { "th": "ติดต่อและร้องเรียน", "en": "Contact & complaints" },
+      "section": "contact",
+      "link": { "page": "contact" },
+      "intro": { "th": "ช่องทางติดต่อสำนักงาน สอบถาม ร้องเรียน และแสดงความคิดเห็น", "en": "Ways to contact the Office, ask questions, make complaints and give feedback." },
+      "children": [
+        { "id": "menu-contact", "label": { "th": "ติดต่อสำนักงาน", "en": "Contact the Office" }, "link": { "page": "contact" } },
+        { "id": "contact-form", "label": { "th": "แบบฟอร์มติดต่อออนไลน์", "en": "Online contact form" }, "path": "contact/form/" },
+        { "id": "contact-qa", "label": { "th": "ถาม-ตอบออนไลน์", "en": "Online Q&A" }, "path": "contact/qa/", "currentSite": "qa" },
+        { "id": "contact-complaints", "label": { "th": "รับเรื่องร้องเรียนและร้องทุกข์", "en": "Complaints and grievances" }, "path": "contact/complaints/", "currentSite": "complaints" },
+        { "id": "contact-feedback", "label": { "th": "รับฟังความคิดเห็นและแบบสำรวจ", "en": "Feedback and surveys" }, "path": "contact/feedback/" },
+        { "id": "contact-social-media", "label": { "th": "สื่อสังคมออนไลน์", "en": "Social media" }, "path": "contact/social-media/" }
+      ]
+    }
+  ]
+}

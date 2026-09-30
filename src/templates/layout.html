@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="[[lang]]">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    [[head-meta]]
+    <meta name="theme-color" content="#fdfbf7">
+    <!-- Interim icons cropped from the emblem in logo.png; replace with the Office's official favicon set when supplied. -->
+    <link rel="icon" type="image/png" sizes="96x96" href="[[root]]assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="[[root]]assets/images/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="[[fonts]]">
+    <link rel="stylesheet" href="[[asset:assets/dist/site.css]]">
+    <script>
+      /* Apply saved accessibility preferences before first paint to avoid a visible jump. */
+      (function () {
+        try {
+          var prefs = JSON.parse(localStorage.getItem("orst-a11y") || "{}");
+          var names = { textSize: "data-text-size", contrast: "data-contrast", readable: "data-readable", links: "data-links", headings: "data-headings", spacing: "data-spacing", motion: "data-motion", cursor: "data-cursor" };
+          for (var key in names) {
+            if (prefs[key] && prefs[key] !== "default") document.documentElement.setAttribute(names[key], prefs[key]);
+          }
+        } catch (error) {}
+      })();
+    </script>
+  </head>
+  <body data-page="[[page-id]]">
+    <a class="skip-link" href="#main">[[t:a11y.skipToContent]]</a>
+    <!-- Floats in the bottom corner above the assistant; early in the source so keyboard users reach it first.
+         Hidden until accessibility.js can open the panel it controls. -->
+    <button type="button" class="a11y-fab" aria-haspopup="dialog" hidden data-a11y-open>
+      <span class="a11y-fab__label">[[t:a11y.panelOpen]]</span>
+      <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-accessibility"></use></svg>
+    </button>
+    [[include:icons]]
+    [[include:header]]
+    <main id="main" tabindex="-1">
+      [[content]]
+    </main>
+    [[include:footer]]
+    [[include:assistant]]
+    [[include:cookies]]
+    <div class="toast-region" data-toast-region role="status" aria-live="polite"></div>
+    [[runtime]]
+    <script src="[[asset:assets/dist/core.js]]" defer></script>
+    [[scripts]]
+  </body>
+</html>

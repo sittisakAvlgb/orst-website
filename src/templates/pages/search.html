@@ -1,0 +1,138 @@
+<div class="page-header">
+  <div class="container">
+    [[breadcrumb]]
+    <div class="page-header__body">
+      <h1>[[t:pages.search.heading]]</h1>
+      <div class="search-page__form search-lg">
+        [[include:search-form]]
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container section section--tight" data-search-page>
+  <noscript><p class="notice">[[t:search.noscript]]</p></noscript>
+
+  <fieldset class="filter-bar">
+    <legend class="visually-hidden">[[t:search.filterLabel]]</legend>
+    <div class="filter-bar__options" data-search-filters>
+      <div class="filter-option"><input type="radio" name="type" id="filter-all" value="all" checked><label for="filter-all">[[t:js.search.types.all]] <span class="filter-option__count" data-count="all"></span></label></div>
+      <div class="filter-option"><input type="radio" name="type" id="filter-dictionary" value="dictionary"><label for="filter-dictionary">[[t:js.search.types.dictionary]] <span class="filter-option__count" data-count="dictionary"></span></label></div>
+      <div class="filter-option"><input type="radio" name="type" id="filter-terminology" value="terminology"><label for="filter-terminology">[[t:js.search.types.terminology]] <span class="filter-option__count" data-count="terminology"></span></label></div>
+      <div class="filter-option"><input type="radio" name="type" id="filter-transliteration" value="transliteration"><label for="filter-transliteration">[[t:js.search.types.transliteration]] <span class="filter-option__count" data-count="transliteration"></span></label></div>
+      <div class="filter-option"><input type="radio" name="type" id="filter-knowledge" value="knowledge"><label for="filter-knowledge">[[t:js.search.types.knowledge]] <span class="filter-option__count" data-count="knowledge"></span></label></div>
+      <div class="filter-option"><input type="radio" name="type" id="filter-publication" value="publication"><label for="filter-publication">[[t:js.search.types.publication]] <span class="filter-option__count" data-count="publication"></span></label></div>
+      <div class="filter-option"><input type="radio" name="type" id="filter-member" value="member"><label for="filter-member">[[t:js.search.types.member]] <span class="filter-option__count" data-count="member"></span></label></div>
+      <div class="filter-option"><input type="radio" name="type" id="filter-news" value="news"><label for="filter-news">[[t:js.search.types.news]] <span class="filter-option__count" data-count="news"></span></label></div>
+    </div>
+  </fieldset>
+
+  <div class="results-summary">
+    <p role="status" data-results-summary></p>
+    <div class="cluster">
+      <label class="results-summary__sort results-summary__match">
+        <span>[[t:search.matchLabel]]</span>
+        <select class="select" data-search-match>
+          <option value="contains">[[t:search.match.contains]]</option>
+          <option value="prefix">[[t:search.match.prefix]]</option>
+        </select>
+      </label>
+      <label class="results-summary__sort">
+        <span>[[t:search.sortLabel]]</span>
+        <select class="select" data-search-sort>
+          <option value="relevance">[[t:search.sort.relevance]]</option>
+          <option value="newest">[[t:search.sort.newest]]</option>
+          <option value="title">[[t:search.sort.title]]</option>
+        </select>
+      </label>
+    </div>
+  </div>
+
+  <div data-search-feature></div>
+  <div aria-busy="false" data-search-results></div>
+  <nav class="pagination" aria-label="[[t:a11y.pagination]]" hidden data-search-pagination></nav>
+</div>
+
+<template data-template="result">
+  <li>
+    <article class="result-item">
+      <p class="type-label" data-slot="type"></p>
+      <h2 class="result-item__title"><a data-slot="link"></a></h2>
+      <p class="result-item__excerpt" data-slot="excerpt"></p>
+      <p class="meta-line" data-slot="meta"></p>
+    </article>
+  </li>
+</template>
+
+<template data-template="feature">
+  <section class="result-feature" aria-labelledby="result-feature-title">
+    <h2 class="visually-hidden" id="result-feature-title">[[t:search.feature.title]]</h2>
+    <p class="cluster">
+      <span class="status status--official">
+        <svg class="icon icon--sm" aria-hidden="true" focusable="false"><use href="#i-official"></use></svg>
+        <span data-slot="label"></span>
+      </span>
+      <span class="status status--sample" data-slot="sample">[[t:common.sampleData]]</span>
+    </p>
+    <p class="result-feature__term" data-slot="term"></p>
+    <p class="result-feature__answer" data-slot="answer"></p>
+    <p class="text-sm text-secondary" data-slot="source"></p>
+    <div class="cluster result-feature__actions">
+      <a class="button button--sm" data-slot="detail">[[t:actions.viewDetails]]</a>
+      <a class="text-link" data-slot="ask">
+        <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-ask"></use></svg>
+        [[t:actions.askAi]]
+      </a>
+    </div>
+  </section>
+</template>
+
+<template data-template="initial">
+  <div class="state">
+    <div class="state__icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg></div>
+    <h2 class="state__title">[[t:search.initial.title]]</h2>
+    <p class="state__text">[[t:search.initial.text]]</p>
+    <div class="state__actions" data-slot="popular"></div>
+  </div>
+</template>
+
+<template data-template="empty">
+  <div class="state">
+    <div class="state__icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg></div>
+    <h2 class="state__title">[[t:search.empty.titleBefore]]“<span data-slot="query"></span>”[[t:search.empty.titleAfter]]</h2>
+    <ul class="state__list">
+      <li>[[t:search.empty.spelling]]</li>
+      <li><span>[[t:search.empty.similar]] <span data-slot="similar"></span></span></li>
+      <li>[[t:search.empty.allDatabases]]</li>
+    </ul>
+    <div class="state__actions">
+      <a class="button" data-slot="all">[[t:search.empty.searchAll]]</a>
+      <a class="button button--primary" data-slot="ask">
+        <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-ask"></use></svg>
+        [[t:search.empty.askAi]]
+      </a>
+    </div>
+  </div>
+</template>
+
+<template data-template="error">
+  <div class="state state--error" role="alert">
+    <div class="state__icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-alert"></use></svg></div>
+    <h2 class="state__title">[[t:search.error.title]]</h2>
+    <p class="state__text">[[t:search.error.text]]</p>
+    <div class="state__actions">
+      <button type="button" class="button button--primary" data-action="retry">
+        <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-refresh"></use></svg>
+        [[t:actions.retry]]
+      </button>
+    </div>
+  </div>
+</template>
+
+<template data-template="loading">
+  <div aria-hidden="true">
+    <div class="result-skeleton"><span class="skeleton skeleton--line skeleton--short"></span><span class="skeleton skeleton--title"></span><span class="skeleton skeleton--line"></span></div>
+    <div class="result-skeleton"><span class="skeleton skeleton--line skeleton--short"></span><span class="skeleton skeleton--title"></span><span class="skeleton skeleton--line"></span></div>
+    <div class="result-skeleton"><span class="skeleton skeleton--line skeleton--short"></span><span class="skeleton skeleton--title"></span><span class="skeleton skeleton--line skeleton--medium"></span></div>
+  </div>
+</template>

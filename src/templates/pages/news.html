@@ -1,0 +1,70 @@
+<div class="page-header">
+  <div class="container">
+    [[breadcrumb]]
+    <div class="page-header__body">
+      <h1>[[t:pages.news.title]]</h1>
+      <p class="lead">[[t:pages.news.lead]]</p>
+    </div>
+  </div>
+</div>
+
+<div class="section section--tight">
+  <div class="container" data-collection="news" data-page-size="9">
+    <noscript><p class="notice">[[t:collection.noscript]]</p></noscript>
+
+    <form role="search" aria-label="[[t:collection.filtersLabel]]" data-collection-filters>
+      <fieldset class="filter-bar">
+        <legend class="visually-hidden">[[t:collection.type]]</legend>
+        <div class="filter-bar__options">
+          <div class="filter-option"><input type="radio" name="category" id="news-all" value="" checked data-filter="category"><label for="news-all">[[t:news.allCategories]]</label></div>
+          <div class="filter-option"><input type="radio" name="category" id="news-announcement" value="announcement" data-filter="category"><label for="news-announcement">[[t:news.categories.announcement]]</label></div>
+          <div class="filter-option"><input type="radio" name="category" id="news-activity" value="activity" data-filter="category"><label for="news-activity">[[t:news.categories.activity]]</label></div>
+          <div class="filter-option"><input type="radio" name="category" id="news-lecture" value="lecture" data-filter="category"><label for="news-lecture">[[t:news.categories.lecture]]</label></div>
+          <div class="filter-option"><input type="radio" name="category" id="news-procurement" value="procurement" data-filter="category"><label for="news-procurement">[[t:news.categories.procurement]]</label></div>
+        </div>
+      </fieldset>
+      <div class="collection-toolbar collection-toolbar--inline">
+        <div class="field">
+          <label class="field__label" for="news-q">[[t:collection.keyword]]</label>
+          <input class="input" id="news-q" type="search" name="q" autocomplete="off" placeholder="[[t:collection.keywordPlaceholder]]" data-filter="q">
+        </div>
+        <div class="field">
+          <label class="field__label" for="news-year">[[t:collection.year]]</label>
+          <select class="select" id="news-year" name="year" data-filter="year" data-options-from="year">
+            <option value="">[[t:collection.allYears]]</option>
+          </select>
+        </div>
+        <div class="field">
+          <button type="reset" class="button button--quiet" data-collection-reset>[[t:collection.reset]]</button>
+        </div>
+      </div>
+    </form>
+
+    <div class="collection-status">
+      <p role="status" data-collection-summary></p>
+      <a class="text-link" href="[[c:legacy.calendar]]" rel="noopener">
+        <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-calendar"></use></svg>
+        [[t:news.calendar]]<span class="visually-hidden">[[t:a11y.externalLink]]</span>
+      </a>
+    </div>
+
+    <ul class="auto-grid collection-grid--news" aria-busy="false" data-collection-list></ul>
+    <nav class="pagination" aria-label="[[t:a11y.pagination]]" hidden data-collection-pagination></nav>
+  </div>
+</div>
+
+<template data-template="item">
+  <li>
+    <article class="news-card">
+      <!-- Replace with official event photograph (16:9) -->
+      <div class="image-placeholder image-placeholder--16x9" aria-hidden="true">Image Placeholder</div>
+      <div class="news-card__body">
+        <p class="meta-line"><span class="type-label" data-type="news" data-slot="category"></span><time class="date" data-slot="date"></time></p>
+        <h2 class="news-item__title"><a class="stretched-link" data-slot="link"></a></h2>
+        <p class="text-sm text-secondary" data-slot="summary"></p>
+      </div>
+    </article>
+  </li>
+</template>
+
+[[include:collection-states]]

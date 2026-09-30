@@ -1,0 +1,248 @@
+/**
+ * Design tokens.
+ * Colour comes from the official ORST emblem (CI): royal gold for identity and highlights,
+ * deep emblem green for actions and active states, warm white and ivory as the ground.
+ * Palette tokens are private to this file; components use semantic tokens only.
+ * Breakpoints (not expressible as custom properties): 480 / 768 / 1024 / 1280 / 1440px.
+ */
+:root {
+  /* ---- Palette — sampled from the emblem (gold ≈ #94670A / #B08840, green ≈ #46A12A) ---- */
+  --gold-900: #4a3505;
+  --gold-800: #6b4c0b;
+  --gold-700: #8a640f;
+  --gold-600: #a57c2a;
+  --gold-400: #c8a96a;
+  --gold-300: #dcc58a;
+  --gold-200: #ebddb8;
+  --gold-100: #f7f0de;
+  --gold-50: #fcf9f1;
+  --green-950: #0a2b16;
+  --green-900: #0f3a1f;
+  --green-800: #155129;
+  --green-700: #1c6b35;
+  --green-600: #2e8540;
+  --green-500: #46a12a;
+  --green-100: #e6f2e3;
+  --ivory-50: #fdfbf6;
+  --ivory-100: #f7f2e6;
+  --ivory-200: #efe8d8;
+  --ink-900: #231f17;
+  --ink-700: #4b4436;
+  --ink-600: #625a4b;
+  --ink-500: #857c6b;
+  --line-300: #e5ddcb;
+  --line-400: #cdbf9f;
+  --amber-700: #7f5300;
+  --amber-100: #f8efd9;
+  --red-700: #a3321f;
+  --red-300: #f1a794;
+  --red-100: #f9e8e4;
+  --white: #ffffff;
+  --on-dark: #f5f1e6;
+  --on-dark-muted: #c9d6c4;
+  --green-dark-line: #3d6a4a;
+
+  /* ---- Semantic colour ---- */
+  --color-brand-primary: var(--green-700);
+  --color-brand-primary-hover: var(--green-900);
+  --color-brand-green: var(--green-600);
+  --color-brand-green-soft: var(--green-100);
+
+  --color-accent: var(--gold-600);
+  --color-accent-strong: var(--gold-800);
+  --color-accent-soft: var(--gold-100);
+  --color-accent-box: var(--gold-200);
+
+  --color-interactive-soft: var(--gold-100);
+  --color-interactive-subtle: var(--gold-200);
+  --color-interactive-line: var(--gold-400);
+
+  --color-background: var(--ivory-50);
+  --color-background-soft: var(--ivory-100);
+  --color-surface: var(--white);
+  --color-surface-sunken: var(--ivory-200);
+  --color-overlay: rgb(35 31 23 / 0.5);
+
+  --color-band-start: var(--gold-50);
+  --color-band-end: var(--gold-200);
+  --color-hero-start: var(--gold-50);
+  --color-hero-end: var(--gold-100);
+  --color-hero-shape: var(--gold-600);
+  --color-decor: var(--gold-200);
+
+  --color-text-primary: var(--ink-900);
+  --color-text-secondary: var(--ink-700);
+  --color-text-muted: var(--ink-600);
+  --color-text-on-brand: var(--white);
+  --color-text-link: var(--green-700);
+
+  --color-border: var(--line-300);
+  --color-border-strong: var(--line-400);
+  /* Form control boundaries need 3:1 against their background (WCAG 1.4.11). */
+  --color-border-input: var(--ink-500);
+  --color-focus: var(--ink-900);
+  --color-focus-halo: var(--gold-300);
+
+  --color-success: var(--green-700);
+  --color-success-soft: var(--green-100);
+  --color-warning: var(--amber-700);
+  --color-warning-soft: var(--amber-100);
+  --color-danger: var(--red-700);
+  --color-danger-soft: var(--red-100);
+
+  /* Inverse surfaces (toast, footer) and development placeholders */
+  --color-inverse-surface: var(--green-900);
+  --color-inverse-surface-deep: var(--green-950);
+  --color-inverse-text: var(--on-dark);
+  --color-inverse-accent: var(--gold-300);
+  --color-inverse-danger: var(--red-300);
+  --color-logo-plate: var(--white);
+  --color-placeholder-hatch: rgb(165 124 42 / 0.08);
+  --color-placeholder-frame: rgb(98 90 75 / 0.25);
+  /* Banner caption strip and pager dots over imagery (strip is opaque enough for 4.5:1 text). */
+  --color-banner-strip: rgb(15 58 31 / 0.88);
+  --color-banner-dot: rgb(245 241 230 / 0.6);
+
+  /* ---- Typography ---- */
+  --font-th-display: "Noto Serif Thai", Georgia, serif;
+  --font-th-ui: "IBM Plex Sans Thai", "Leelawadee UI", Tahoma, sans-serif;
+  --font-en: "Geist", "Segoe UI", system-ui, sans-serif;
+  --font-data: "Geist", "Segoe UI", system-ui, sans-serif;
+
+  --text-xs: 0.8125rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-md: 1.125rem;
+  --text-lg: 1.25rem;
+  --text-xl: clamp(1.375rem, 1.22rem + 0.55vw, 1.625rem);
+  --text-2xl: clamp(1.625rem, 1.35rem + 1vw, 2.125rem);
+  --text-3xl: clamp(1.875rem, 1.45rem + 1.7vw, 2.75rem);
+  --text-4xl: clamp(2.125rem, 1.55rem + 2.4vw, 3.375rem);
+
+  --leading-heading: 1.35;
+  --leading-body: 1.6;
+  --leading-compact: 1.45;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  --measure: 68ch;
+
+  /* ---- Spacing (named by pixel value at 16px root) ---- */
+  --space-4: 0.25rem;
+  --space-8: 0.5rem;
+  --space-12: 0.75rem;
+  --space-16: 1rem;
+  --space-24: 1.5rem;
+  --space-32: 2rem;
+  --space-40: 2.5rem;
+  --space-48: 3rem;
+  --space-64: 4rem;
+  --space-80: 5rem;
+  --space-96: 6rem;
+  --section-gap: clamp(3.5rem, 2.5rem + 4vw, 6rem);
+
+  /* ---- Layout ---- */
+  --container-max: 1600px;
+  --container-pad: clamp(1rem, 0.5rem + 2.5vw, 3rem);
+  /* Height of the part of the header that stays visible while scrolling. */
+  --header-height: 64px;
+  --touch-target: 44px;
+
+  /* ---- Radius ---- */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-card: 16px;
+  --radius-button: 999px;
+  --radius-round: 999px;
+
+  /* ---- Borders ---- */
+  --border-width: 1px;
+  --border-accent-width: 2px;
+  --focus-width: 3px;
+  --focus-offset: 2px;
+
+  /* ---- Elevation — only for layers that float above content ---- */
+  --shadow-popover: 0 16px 36px -12px rgb(35 31 23 / 0.22), 0 2px 6px rgb(35 31 23 / 0.06);
+  --shadow-card: 0 24px 48px -28px rgb(35 31 23 / 0.28), 0 2px 8px rgb(35 31 23 / 0.05);
+  --shadow-modal: 0 28px 64px -16px rgb(35 31 23 / 0.35);
+  --shadow-sticky: 0 1px 0 var(--color-border), 0 6px 16px -12px rgb(35 31 23 / 0.25);
+
+  /* ---- Motion ---- */
+  --duration-fast: 140ms;
+  --duration-normal: 200ms;
+  --duration-slow: 280ms;
+  --duration-slide: 480ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-exit: cubic-bezier(0.4, 0, 1, 1);
+  --lift-hover: -2px;
+
+  /* ---- Z-index ---- */
+  --z-sticky: 100;
+  --z-assistant: 150;
+  --z-dropdown: 200;
+  --z-overlay: 300;
+  --z-drawer: 400;
+  --z-modal: 500;
+  --z-toast: 600;
+  --z-skip-link: 700;
+}
+
+/* Thai glyphs read small at the Latin default: bump the base size and give Thai more line height. */
+html[lang="th"] {
+  --text-base: 1.0625rem;
+  --leading-body: 1.75;
+  --leading-heading: 1.45;
+  --leading-compact: 1.55;
+}
+
+/* Surfaces with a dark ground (the footer) re-map the semantic tokens instead of overriding components. */
+.theme-dark {
+  --color-background: var(--green-900);
+  --color-background-soft: var(--green-800);
+  --color-surface: var(--green-800);
+  --color-text-primary: var(--on-dark);
+  --color-text-secondary: var(--on-dark-muted);
+  --color-text-muted: var(--on-dark-muted);
+  --color-text-link: var(--gold-300);
+  --color-brand-primary: var(--gold-300);
+  --color-border: var(--green-dark-line);
+  --color-border-strong: var(--on-dark-muted);
+  --color-focus: var(--gold-300);
+  --color-focus-halo: var(--green-950);
+}
+
+/* User preference set by the accessibility controls. */
+html[data-contrast="high"] {
+  --color-background: var(--white);
+  --color-background-soft: var(--white);
+  --color-band-start: var(--white);
+  --color-band-end: var(--gold-100);
+  --color-hero-start: var(--white);
+  --color-hero-end: var(--gold-50);
+  --color-text-secondary: var(--ink-900);
+  --color-text-muted: var(--ink-700);
+  --color-brand-primary: var(--green-900);
+  --color-text-link: var(--green-900);
+  --color-border: var(--ink-600);
+  --color-border-strong: var(--ink-900);
+  --color-border-input: var(--ink-900);
+}
+
+html[data-text-size="small"] { font-size: 93.75%; }
+html[data-text-size="large"] { font-size: 112.5%; }
+html[data-text-size="larger"] { font-size: 125%; }
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 1ms;
+    --duration-normal: 1ms;
+    --duration-slow: 1ms;
+    --duration-slide: 1ms;
+    --lift-hover: 0;
+  }
+}

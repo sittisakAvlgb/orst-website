@@ -1,0 +1,39 @@
+<template data-template="empty">
+  <li class="collection-state">
+    <div class="state">
+      <div class="state__icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-filter"></use></svg></div>
+      <h2 class="state__title">[[t:collection.empty.title]]</h2>
+      <p class="state__text">[[t:collection.empty.text]]</p>
+      <div class="state__actions">
+        <button type="button" class="button" data-action="reset">[[t:collection.reset]]</button>
+        <a class="button button--quiet" href="[[href:search]]">[[t:megaMenu.knowledge.searchAll]]</a>
+      </div>
+    </div>
+  </li>
+</template>
+
+<template data-template="error">
+  <li class="collection-state">
+    <div class="state state--error" role="alert">
+      <div class="state__icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-alert"></use></svg></div>
+      <h2 class="state__title">[[t:collection.error.title]]</h2>
+      <p class="state__text">[[t:collection.error.text]]</p>
+      <div class="state__actions">
+        <button type="button" class="button button--primary" data-action="retry">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-refresh"></use></svg>
+          [[t:actions.retry]]
+        </button>
+      </div>
+    </div>
+  </li>
+</template>
+
+<template data-template="loading">
+  <li aria-hidden="true">
+    <div class="stack stack--8">
+      <span class="skeleton image-placeholder image-placeholder--3x4"></span>
+      <span class="skeleton skeleton--line skeleton--medium"></span>
+      <span class="skeleton skeleton--title"></span>
+    </div>
+  </li>
+</template>

@@ -1,0 +1,101 @@
+<!-- Floating contact shortcut: opens a help panel — a question box and topics for the knowledge assistant, popular
+     questions, then Messenger, LINE and phone. Mascot: assets/images/assistant/mascot.png (see the README there). Without JavaScript the button is a plain link to the contact page. Hidden near the footer. -->
+<aside class="assistant-fab" aria-label="[[t:assistant.label]]" data-assistant>
+  <div class="contact-panel" id="contact-panel" role="dialog" aria-labelledby="contact-panel-title" hidden data-contact-panel>
+    <div class="contact-panel__head">
+      [[assistant-mascot]]
+      <p class="contact-panel__eyebrow"><span class="contact-panel__badge" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-ask"></use></svg></span>[[t:assistant.panelEyebrow]]</p>
+      <p class="contact-panel__title" id="contact-panel-title">[[t:assistant.greeting]]</p>
+      <p class="contact-panel__sub">[[t:assistant.sub]]</p>
+      <button type="button" class="contact-panel__close" data-contact-close>
+        <svg class="icon icon--sm" aria-hidden="true" focusable="false"><use href="#i-close"></use></svg>
+        <span class="visually-hidden">[[t:assistant.panelClose]]</span>
+      </button>
+    </div>
+    <div class="contact-panel__body">
+      <form class="contact-ask" action="[[href:knowledge-ai]]" method="get" role="search">
+        <label class="visually-hidden" for="contact-ask-input">[[t:assistant.askLabel]]</label>
+        <svg class="icon contact-ask__icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg>
+        <input id="contact-ask-input" name="q" type="text" autocomplete="off" maxlength="200" required placeholder="[[t:assistant.aiPlaceholder]]">
+        <button type="submit" class="contact-ask__send"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-send"></use></svg><span class="visually-hidden">[[t:assistant.aiSend]]</span></button>
+      </form>
+      <ul class="contact-topics" aria-label="[[t:assistant.topicsLabel]]">
+          <li><a class="contact-topic" href="[[href:knowledge-ai?q=]][[t:assistant.topics.procurement]]">[[t:assistant.topics.procurement]]</a></li>
+          <li><a class="contact-topic" href="[[href:knowledge-ai?q=]][[t:assistant.topics.letters]]">[[t:assistant.topics.letters]]</a></li>
+          <li><a class="contact-topic" href="[[href:knowledge-ai?q=]][[t:assistant.topics.words]]">[[t:assistant.topics.words]]</a></li>
+          <li><a class="contact-topic" href="[[href:knowledge-ai?q=]][[t:assistant.topics.contact]]">[[t:assistant.topics.contact]]</a></li>
+      </ul>
+
+      <div class="contact-popular">
+        <div class="contact-popular__head">
+          <p class="contact-popular__title" id="contact-popular-title">[[t:assistant.popularTitle]]</p>
+          <a class="contact-popular__all" href="[[href:public-faq]]">[[t:assistant.popularAll]]<svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg></a>
+        </div>
+        <ul class="contact-popular__list" aria-labelledby="contact-popular-title">
+          <li>
+            <a class="contact-popular__item" href="[[href:procurement]]">
+              <span class="contact-popular__icon" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-document"></use></svg></span>
+              <span class="contact-popular__text">[[t:assistant.popular.procurement]]</span>
+              <svg class="icon contact-popular__go" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg>
+            </a>
+          </li>
+          <li>
+            <a class="contact-popular__item" href="[[href:search]]">
+              <span class="contact-popular__icon" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-book"></use></svg></span>
+              <span class="contact-popular__text">[[t:assistant.popular.words]]</span>
+              <svg class="icon contact-popular__go" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg>
+            </a>
+          </li>
+          <li>
+            <a class="contact-popular__item" href="[[href:contact]]">
+              <span class="contact-popular__icon" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-members"></use></svg></span>
+              <span class="contact-popular__text">[[t:assistant.popular.contact]]</span>
+              <svg class="icon contact-popular__go" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg>
+            </a>
+          </li>
+          <li>
+            <a class="contact-popular__item" href="[[href:news]]">
+              <span class="contact-popular__icon" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-megaphone"></use></svg></span>
+              <span class="contact-popular__text">[[t:assistant.popular.news]]</span>
+              <svg class="icon contact-popular__go" aria-hidden="true" focusable="false"><use href="#i-arrow-right"></use></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <ul class="contact-channels" aria-label="[[t:assistant.channelsLabel]]">
+        <li>
+          <a class="contact-channel" href="[[c:contact.messenger]]" target="_blank" rel="noopener">
+            <span class="contact-channel__icon" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-messenger"></use></svg></span>
+            <span class="contact-channel__text"><span class="contact-channel__name">[[t:assistant.chat.name]]</span><span class="contact-channel__desc" lang="en">[[t:assistant.chat.desc]]</span></span>
+            <span class="visually-hidden">[[t:a11y.externalLink]]</span>
+          </a>
+        </li>
+        <li>
+          <a class="contact-channel" href="[[c:contact.line]]" target="_blank" rel="noopener">
+            <span class="contact-channel__icon" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-line"></use></svg></span>
+            <span class="contact-channel__text"><span class="contact-channel__name" lang="en">[[t:assistant.line.name]]</span><span class="contact-channel__desc" lang="en">[[t:assistant.line.desc]]</span></span>
+            <span class="visually-hidden">[[t:a11y.externalLink]]</span>
+          </a>
+        </li>
+        <li>
+          <a class="contact-channel" href="tel:[[c:contact.phoneHref]]">
+            <span class="contact-channel__icon" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"></use></svg></span>
+            <span class="contact-channel__text"><span class="contact-channel__name">[[t:assistant.phone.name]]</span><span class="contact-channel__desc">[[c:contact.phoneDisplay]]</span></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <a class="assistant-fab__link" href="[[href:contact]]" aria-controls="contact-panel" data-contact-toggle>
+    <span class="assistant-fab__icon" aria-hidden="true"><svg class="icon" focusable="false"><use href="#i-ask"></use></svg></span>
+    <span class="assistant-fab__text">
+      <span class="assistant-fab__eyebrow">[[t:assistant.eyebrow]]</span>
+      <span class="assistant-fab__title">[[t:assistant.title]]</span>
+    </span>
+  </a>
+  <button type="button" class="assistant-fab__close" data-assistant-close>
+    <svg class="icon icon--sm" aria-hidden="true" focusable="false"><use href="#i-close"></use></svg>
+    <span class="visually-hidden">[[t:assistant.close]]</span>
+  </button>
+</aside>

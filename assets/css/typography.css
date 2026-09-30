@@ -1,0 +1,133 @@
+/**
+ * Typography roles.
+ * Noto Serif Thai  → institutional character (H1, key H2, editorial titles) on Thai pages only.
+ * IBM Plex Sans Thai → Thai UI and body copy.
+ * Geist            → English, numbers, dates, IDs, coordinates and other data.
+ *
+ * The Thai UI stack lists Geist first: Geist has no Thai glyphs, so Thai characters fall
+ * through to IBM Plex Sans Thai while Latin letters and digits render in Geist.
+ */
+html[lang="th"] {
+  --font-body: "Geist", "IBM Plex Sans Thai", "Leelawadee UI", Tahoma, sans-serif;
+  --font-heading: var(--font-th-display);
+  --tracking-heading: 0;
+}
+
+html[lang="en"] {
+  --font-body: var(--font-en);
+  --font-heading: var(--font-en);
+  --tracking-heading: -0.015em;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+  font-weight: var(--weight-regular);
+  color: var(--color-text-primary);
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  line-height: var(--leading-heading);
+  color: var(--color-text-primary);
+  text-wrap: balance;
+}
+
+/* Serif is reserved for the top of the hierarchy. H3 and below stay in the UI face. */
+h1 {
+  font-family: var(--font-heading);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-heading);
+}
+
+h1 { font-size: var(--text-3xl); }
+
+h2,
+.h2 {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-heading);
+}
+
+/* Utility-level H2s (lists, sidebars) opt out of the serif. */
+.h2-ui {
+  font-family: var(--font-body);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-semibold);
+}
+
+h3,
+.h3 {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semibold);
+}
+
+h4,
+.h4 {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+}
+
+.display {
+  font-family: var(--font-heading);
+  font-size: var(--text-4xl);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-heading);
+  line-height: 1.3;
+}
+
+html[lang="en"] .display { line-height: 1.12; }
+
+p { margin: 0; }
+
+.lead {
+  font-size: var(--text-md);
+  color: var(--color-text-secondary);
+  max-width: var(--measure);
+}
+
+.text-sm { font-size: var(--text-sm); line-height: var(--leading-compact); }
+.text-xs { font-size: var(--text-xs); line-height: var(--leading-compact); }
+.text-secondary { color: var(--color-text-secondary); }
+.text-muted { color: var(--color-text-muted); }
+
+/* Short uppercase-free label above a section title. Kept small and quiet on purpose. */
+.eyebrow {
+  display: block;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-compact);
+  color: var(--color-brand-primary);
+}
+
+.number,
+.date,
+.metric,
+.coordinates,
+.technical-data {
+  font-family: var(--font-data);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0;
+}
+
+.prose {
+  max-width: var(--measure);
+}
+
+.prose > * + * { margin-top: var(--space-16); }
+.prose h2 { margin-top: var(--space-48); font-size: var(--text-xl); }
+.prose h3 { margin-top: var(--space-32); }
+.prose ul,
+.prose ol { padding-left: var(--space-24); }
+.prose li + li { margin-top: var(--space-8); }

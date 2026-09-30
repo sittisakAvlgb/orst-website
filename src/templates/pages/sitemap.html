@@ -1,0 +1,107 @@
+<!-- Hero band: a deep green scrim over the optional photo in assets/images/headers/sitemap.*. -->
+<div class="page-hero theme-dark" [[hero:sitemap]]>
+  <div class="page-hero__media" aria-hidden="true"></div>
+  <div class="container page-hero__inner">
+    [[breadcrumb]]
+    <div class="page-hero__body">
+      <h1 class="page-hero__title">[[t:pages.sitemap.title]]</h1>
+      <p class="page-hero__lead">[[t:pages.sitemap.lead]]</p>
+    </div>
+  </div>
+</div>
+
+<div class="section sitemap-section">
+  <div class="container with-sidebar sitemap-layout">
+
+    <!-- Filter and contents stay in view while the index is read. sitemap.js wires the filter;
+         without it every link below is already visible and the jump links still work. -->
+    <aside class="with-sidebar__aside sitemap-aside">
+      <div class="sitemap-filter">
+        <svg class="icon sitemap-filter__icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg>
+        <label class="visually-hidden" for="sitemap-filter">[[t:sitemapPage.filterLabel]]</label>
+        <input class="sitemap-filter__input" id="sitemap-filter" type="search" autocomplete="off" spellcheck="false" maxlength="80" placeholder="[[t:sitemapPage.filterShort]]" data-sitemap-input>
+        <kbd class="sitemap-filter__key" aria-hidden="true" hidden data-sitemap-key>/</kbd>
+        <button type="button" class="icon-button sitemap-filter__clear" hidden data-sitemap-clear>
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-close"></use></svg>
+          <span class="visually-hidden">[[t:sitemapPage.clear]]</span>
+        </button>
+      </div>
+
+      <div class="sitemap-aside__status">
+        <p class="sitemap-aside__count" role="status" aria-live="polite" data-sitemap-count></p>
+        <button type="button" class="sitemap-aside__collapse" hidden data-sitemap-collapse>
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron-down"></use></svg>
+          <span data-sitemap-collapse-label>[[t:sitemapPage.collapseAll]]</span>
+        </button>
+      </div>
+
+      <nav class="sitemap-index" aria-labelledby="sitemap-index-title">
+        <h2 class="sitemap-aside__title" id="sitemap-index-title">[[t:sitemapPage.jumpTo]]</h2>
+        <ul class="sitemap-index__list">
+          <li><a class="sitemap-chip" href="#sm-main"><span class="sitemap-chip__number" aria-hidden="true">[[sitemap-number:1]]</span><span class="sitemap-chip__label">[[t:sitemapPage.main]]</span><span class="sitemap-chip__count">3</span></a></li>
+          [[sitemap-index]]
+          <li><a class="sitemap-chip" href="#sm-policies"><span class="sitemap-chip__number" aria-hidden="true">·</span><span class="sitemap-chip__label">[[t:footer.policies]]</span><span class="sitemap-chip__count">5</span></a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div class="sitemap-main">
+      <div class="sitemap-grid" data-sitemap-grid>
+        <section class="sitemap-group" id="sm-main" aria-labelledby="sm-main-title" data-sitemap-group>
+          <p class="sitemap-group__number" aria-hidden="true">[[sitemap-number:1]]</p>
+          <div class="sitemap-group__content">
+            <div class="sitemap-group__head">
+              <h2 class="sitemap-group__title" id="sm-main-title" data-sitemap-group-title><span class="sitemap-group__link"><span class="sitemap-label" data-sitemap-label>[[t:sitemapPage.main]]</span></span></h2>
+              <p class="sitemap-group__meta">[[t:sitemapPage.pageCountMain]]</p>
+              <button class="icon-button sitemap-group__toggle" type="button" aria-expanded="true" aria-controls="sm-main-body" data-sitemap-section-toggle>
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron-down"></use></svg>
+                <span class="visually-hidden">[[t:sitemapPage.toggleSection]]</span>
+              </button>
+            </div>
+            <div class="sitemap-group__body" id="sm-main-body" data-sitemap-body>
+              <div class="sitemap-branch sitemap-branch--plain sitemap-branch--full" data-sitemap-branch>
+                <ul class="sitemap-list">
+                  <li class="sitemap-item" data-sitemap-item><a class="sitemap-item__link" href="[[href:home]]"><span class="sitemap-label" data-sitemap-label>[[t:nav.home]]</span></a></li>
+                  <li class="sitemap-item" data-sitemap-item><a class="sitemap-item__link" href="[[href:search]]"><span class="sitemap-label" data-sitemap-label>[[t:megaMenu.knowledge.searchAll]]</span></a></li>
+                  <li class="sitemap-item" data-sitemap-item><a class="sitemap-item__link" href="[[href:knowledge-ai]]"><span class="sitemap-label" data-sitemap-label>[[t:services.ai.name]]</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        [[sitemap-tree]]
+        <section class="sitemap-group" id="sm-policies" aria-labelledby="sm-policies-title" data-sitemap-group>
+          <p class="sitemap-group__number" aria-hidden="true">·</p>
+          <div class="sitemap-group__content">
+            <div class="sitemap-group__head">
+              <h2 class="sitemap-group__title" id="sm-policies-title" data-sitemap-group-title><a class="sitemap-group__link" href="[[href:policies]]"><span class="sitemap-label" data-sitemap-label>[[t:footer.policies]]</span></a></h2>
+              <p class="sitemap-group__meta">[[t:sitemapPage.pageCountPolicies]]</p>
+              <button class="icon-button sitemap-group__toggle" type="button" aria-expanded="true" aria-controls="sm-policies-body" data-sitemap-section-toggle>
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron-down"></use></svg>
+                <span class="visually-hidden">[[t:sitemapPage.toggleSection]]</span>
+              </button>
+            </div>
+            <div class="sitemap-group__body" id="sm-policies-body" data-sitemap-body>
+              <div class="sitemap-branch sitemap-branch--plain sitemap-branch--full" data-sitemap-branch>
+                <ul class="sitemap-list">
+                  <li class="sitemap-item" data-sitemap-item><a class="sitemap-item__link" href="[[href:policies#website-policy]]"><span class="sitemap-label" data-sitemap-label>[[t:policies.website.name]]</span></a></li>
+                  <li class="sitemap-item" data-sitemap-item><a class="sitemap-item__link" href="[[href:policies#privacy]]"><span class="sitemap-label" data-sitemap-label>[[t:policies.privacy.name]]</span></a></li>
+                  <li class="sitemap-item" data-sitemap-item><a class="sitemap-item__link" href="[[href:policies#security]]"><span class="sitemap-label" data-sitemap-label>[[t:policies.security.name]]</span></a></li>
+                  <li class="sitemap-item" data-sitemap-item><a class="sitemap-item__link" href="[[href:policies#copyright]]"><span class="sitemap-label" data-sitemap-label>[[t:policies.copyright.name]]</span></a></li>
+                  <li class="sitemap-item" data-sitemap-item><a class="sitemap-item__link" href="[[href:policies#disclaimer]]"><span class="sitemap-label" data-sitemap-label>[[t:policies.disclaimer.name]]</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="state sitemap-empty" hidden data-sitemap-empty>
+        <p class="state__title" data-sitemap-empty-title></p>
+        <p class="state__text">[[t:sitemapPage.emptyText]]</p>
+        <p><a class="button button--primary" href="[[href:search]]">[[t:sitemapPage.emptyAction]]</a></p>
+      </div>
+    </div>
+
+  </div>
+</div>

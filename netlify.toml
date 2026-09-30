@@ -1,0 +1,7 @@
+# Netlify: build the site, then publish only the hostable files gathered in _site/.
+[build]
+  command = "npm run package"
+  publish = "_site"
+
+[build.environment]
+  NODE_VERSION = "20"

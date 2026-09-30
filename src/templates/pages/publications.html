@@ -1,0 +1,83 @@
+<div class="page-header">
+  <div class="container">
+    [[breadcrumb]]
+    <div class="page-header__body">
+      <h1>[[t:pages.publications.title]]</h1>
+      <p class="lead">[[t:pages.publications.lead]]</p>
+    </div>
+  </div>
+</div>
+
+<div class="section section--tight">
+  <div class="container" data-collection="publications" data-page-size="12">
+    <noscript><p class="notice">[[t:collection.noscript]]</p></noscript>
+
+    <form class="collection-toolbar" role="search" aria-label="[[t:collection.filtersLabel]]" data-collection-filters>
+      <div class="field">
+        <label class="field__label" for="pub-q">[[t:collection.keyword]]</label>
+        <input class="input" id="pub-q" type="search" name="q" autocomplete="off" placeholder="[[t:collection.keywordPlaceholder]]" data-filter="q">
+      </div>
+      <div class="field">
+        <label class="field__label" for="pub-category">[[t:collection.type]]</label>
+        <select class="select" id="pub-category" name="category" data-filter="category">
+          <option value="">[[t:collection.allTypes]]</option>
+          <option value="dictionary">[[t:publications.categories.dictionary]]</option>
+          <option value="terminology">[[t:publications.categories.terminology]]</option>
+          <option value="principles">[[t:publications.categories.principles]]</option>
+          <option value="reference">[[t:publications.categories.reference]]</option>
+          <option value="journal">[[t:publications.categories.journal]]</option>
+        </select>
+      </div>
+      <div class="field">
+        <label class="field__label" for="pub-year">[[t:collection.year]]</label>
+        <select class="select" id="pub-year" name="year" data-filter="year" data-options-from="year">
+          <option value="">[[t:collection.allYears]]</option>
+        </select>
+      </div>
+      <div class="field">
+        <label class="field__label" for="pub-subject">[[t:collection.subject]]</label>
+        <select class="select" id="pub-subject" name="subject" data-filter="subject">
+          <option value="">[[t:collection.allSubjects]]</option>
+          <option value="language">[[t:publications.subjects.language]]</option>
+          <option value="science">[[t:publications.subjects.science]]</option>
+          <option value="social">[[t:publications.subjects.social]]</option>
+          <option value="arts">[[t:publications.subjects.arts]]</option>
+          <option value="geography">[[t:publications.subjects.geography]]</option>
+        </select>
+      </div>
+      <div class="field">
+        <button type="reset" class="button button--quiet" data-collection-reset>[[t:collection.reset]]</button>
+      </div>
+    </form>
+
+    <div class="collection-status">
+      <p role="status" data-collection-summary></p>
+    </div>
+
+    <ul class="auto-grid collection-grid--publications" aria-busy="false" data-collection-list></ul>
+    <nav class="pagination" aria-label="[[t:a11y.pagination]]" hidden data-collection-pagination></nav>
+  </div>
+</div>
+
+<template data-template="item">
+  <li>
+    <article class="pub-item">
+      <!-- Replace with official publication cover (3:4) -->
+      <div class="image-placeholder image-placeholder--3x4 pub-item__cover" aria-hidden="true">Cover</div>
+      <div class="pub-item__body">
+        <p class="type-label" data-slot="category"></p>
+        <h2 class="pub-item__title"><a class="stretched-link" data-slot="link"></a></h2>
+        <p class="meta-line"><span class="number" data-slot="year"></span><span data-slot="format"></span></p>
+        <p class="pub-item__actions">
+          <a rel="noopener" data-slot="read">[[t:actions.readOnline]]<span class="visually-hidden">[[t:a11y.externalLink]]</span></a>
+          <a rel="noopener" data-slot="download">
+            <svg class="icon icon--sm" aria-hidden="true" focusable="false"><use href="#i-download"></use></svg>
+            [[t:actions.download]]<span class="visually-hidden">[[t:a11y.externalLink]]</span>
+          </a>
+        </p>
+      </div>
+    </article>
+  </li>
+</template>
+
+[[include:collection-states]]

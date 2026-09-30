@@ -1,0 +1,1200 @@
+{
+  "org": {
+    "name": "Office of the Royal Society",
+    "nameTh": "สำนักงานราชบัณฑิตยสภา",
+    "nameEn": "Office of the Royal Society",
+    "tagline": "Trusted Thai Knowledge, Easier to Discover",
+    "prototypeNote": "Prototype website — some listed content is sample data"
+  },
+  "a11y": {
+    "skipToContent": "Skip to main content",
+    "breadcrumb": "Breadcrumb",
+    "mainNav": "Main navigation",
+    "languageNav": "Choose language",
+    "language": "Language",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "closeSearch": "Close search",
+    "externalLink": " (opens external website)",
+    "preferences": "Display",
+    "textSize": "Text size",
+    "textDefault": "Default",
+    "textLarge": "Large",
+    "textLarger": "Larger",
+    "contrast": "Colour contrast",
+    "contrastDefault": "Default",
+    "contrastHigh": "High contrast",
+    "backToTop": "Back to top",
+    "logoAlt": "Office of the Royal Society — Home",
+    "pagination": "Pagination",
+    "panelOpen": "Accessibility",
+    "panelTitle": "Accessibility help",
+    "panelIntro": "Adjust how this site is displayed. Your choices are remembered on this device.",
+    "panelClose": "Close the accessibility panel",
+    "textSmall": "Small",
+    "displayGroup": "Display",
+    "readable": "Easy-read mode",
+    "readableHint": "Plain typeface, looser lines",
+    "linkHighlight": "Highlight links",
+    "headingHighlight": "Highlight headings",
+    "lineSpacing": "Increase line spacing",
+    "motionGroup": "Motion and pointer",
+    "reduceMotion": "Reduce motion",
+    "largeCursor": "Large pointer",
+    "readingGroup": "Reading help",
+    "readAloud": "Read this page aloud",
+    "readAloudStop": "Stop reading",
+    "readAloudNote": "Uses the voices installed on your own device; quality varies by device.",
+    "reset": "Reset to default",
+    "done": "Done"
+  },
+  "nav": {
+    "home": "Home",
+    "knowledge": "Dictionaries & Knowledge",
+    "library": "Knowledge Library",
+    "news": "News & Events",
+    "royalSociety": "About the Royal Society",
+    "about": "About ORST",
+    "eservice": "e-Service",
+    "transparency": "Open Data & Transparency",
+    "contact": "Contact us",
+    "sitemap": "Sitemap",
+    "menu": "Menu",
+    "allMenu": "Full menu"
+  },
+  "langToggle": {
+    "short": "TH",
+    "full": "ภาษาไทย"
+  },
+  "megaMenu": {
+    "knowledge": {
+      "desc": "Dictionaries, term databases, publications and online learning.",
+      "overview": "All knowledge services",
+      "databases": "Language databases",
+      "tools": "Assistants and tools",
+      "searchAll": "Search all databases",
+      "searchAllDesc": "Words, books, news and knowledge in one search"
+    },
+    "library": {
+      "desc": "Articles, publications and learning media from the Royal Society.",
+      "overview": "Explore the library",
+      "collections": "Collections",
+      "archives": "Related sources"
+    },
+    "news": {
+      "desc": "Press releases, activities, academic lectures and ways to follow our news.",
+      "overview": "All news",
+      "updates": "News and announcements",
+      "events": "Events"
+    },
+    "royalSociety": {
+      "desc": "The Royal Society, its three academies and its members.",
+      "overview": "About the Royal Society",
+      "about": "The Royal Society",
+      "divisions": "Academies"
+    },
+    "about": {
+      "desc": "Organisation, administration and how to contact the Office.",
+      "overview": "About the Office",
+      "organization": "Organisation",
+      "public": "Public information",
+      "transparencyDesc": "Plans, budget, procurement and reports",
+      "contactDesc": "Address, telephone, email and map"
+    }
+  },
+  "services": {
+    "dictionary": {
+      "name": "Dictionary",
+      "short": "Meanings and correct spelling of Thai words",
+      "summary": "Look up meanings and spelling in the Royal Institute Dictionary.",
+      "action": "Search the dictionary",
+      "intro": "Look up meanings, spelling and word classes in the Royal Institute Dictionary, B.E. 2554 (2011).",
+      "external": "Open the online dictionary",
+      "source": "Royal Institute Dictionary, B.E. 2554 (2011)",
+      "sourceNote": "Entries come from the Royal Institute Dictionary, B.E. 2554 (2011), provided by the Office of the Royal Society. Open the full database to see every detail of an entry."
+    },
+    "terminology": {
+      "name": "Coined Terms",
+      "short": "Thai academic terms coined for foreign terms",
+      "summary": "Find the Thai terms coined by the Royal Society for foreign academic vocabulary.",
+      "action": "Search coined terms",
+      "intro": "Search Thai academic terms against their English equivalents in the coined-terms database covering 40 fields.",
+      "external": "Open the coined-terms database",
+      "source": "Coined terms in 40 academic fields",
+      "sourceNote": "Terms come from the Office of the Royal Society coined-terms database covering 40 academic fields. Open the full database to see fields and details."
+    },
+    "transliteration": {
+      "name": "Transliteration",
+      "short": "Writing foreign words in Thai script",
+      "summary": "Check how to write foreign words in Thai script according to transliteration principles.",
+      "action": "Search transliterations",
+      "intro": "Find how foreign words are written in Thai script in the transliteration database.",
+      "external": "Open the transliteration database",
+      "source": "Office of the Royal Society transliteration database",
+      "sourceNote": "Entries come from the Office of the Royal Society transliteration database. Open the full database to see every detail of an entry."
+    },
+    "gazetteer": {
+      "name": "Thai Geographical Gazetteer",
+      "short": "Geographical names and their correct spelling"
+    },
+    "ai": {
+      "name": "ORST Knowledge AI",
+      "short": "Ask questions and get answers with official sources"
+    },
+    "etest": {
+      "name": "Thai Language Knowledge Test",
+      "short": "Test your Thai language knowledge online"
+    },
+    "qa": {
+      "name": "Questions & Answers",
+      "short": "Common questions answered by the Office"
+    },
+    "knowledge": {
+      "name": "Knowledge",
+      "short": "Articles, infographics and Thai language know-how"
+    },
+    "publications": {
+      "name": "Books & E-Books",
+      "short": "Read online or view publication details"
+    },
+    "members": {
+      "name": "Find a Fellow",
+      "short": "Fellows of the Royal Society by academy and field"
+    }
+  },
+  "library": {
+    "articles": {
+      "name": "Articles & knowledge",
+      "short": "Articles on Thai language and academic topics"
+    },
+    "publications": {
+      "name": "Books & E-Books",
+      "short": "Office publications by type, year and subject"
+    },
+    "media": {
+      "name": "Infographics & media",
+      "short": "Infographics, videos and lectures"
+    },
+    "encyclopedia": {
+      "name": "Encyclopaedia & taxonomy",
+      "short": "Related encyclopaedia databases"
+    },
+    "archive": {
+      "name": "Historical archive",
+      "short": "Digitised historical documents and publications"
+    },
+    "infographics": {
+      "name": "Infographics",
+      "short": "Thai language knowledge in easy visual form"
+    },
+    "lectures": {
+      "short": "Academic lectures given by Fellows"
+    },
+    "video": {
+      "name": "The Office on YouTube",
+      "short": "Knowledge videos and lectures"
+    }
+  },
+  "news": {
+    "categories": {
+      "announcement": "Announcements",
+      "activity": "Activities",
+      "lecture": "Academic lectures",
+      "procurement": "Procurement notices"
+    },
+    "calendar": "Event calendar",
+    "allCategories": "All"
+  },
+  "royalSociety": {
+    "members": {
+      "name": "Fellows directory",
+      "short": "Find Fellows by academy and field",
+      "lead": "Search by name or field, or browse by academy.",
+      "filtersLabel": "Fellows directory filters",
+      "keyword": "Name or field",
+      "keywordPlaceholder": "e.g. Linguistics"
+    },
+    "roles": {
+      "name": "Roles and duties",
+      "short": "The mission of the Royal Society"
+    },
+    "divisions": {
+      "moralPolitical": "Academy of Moral and Political Sciences",
+      "science": "Academy of Science",
+      "arts": "Academy of Arts"
+    },
+    "website": "Read more on the Royal Society website",
+    "divisionWebsite": "Academy website",
+    "allDivisions": "All academies"
+  },
+  "navPage": {
+    "pending": "Content for this page is being prepared.",
+    "readCurrent": "Read on the current website",
+    "inSection": "In this section",
+    "overview": "Overview",
+    "description": "{label} — Office of the Royal Society",
+    "otherPages": "Other pages"
+  },
+  "search": {
+    "label": "Search",
+    "placeholder": "Search words, coined terms, transliterations, books or knowledge…",
+    "placeholderShort": "Search words or knowledge",
+    "submit": "Search",
+    "clear": "Clear search",
+    "suggestions": "Search suggestions",
+    "dialogTitle": "Search knowledge",
+    "scopesLabel": "Search only",
+    "scopeMembers": "Fellows",
+    "hintMove": "move",
+    "hintOpen": "open",
+    "hintClose": "close",
+    "noscript": "Search on this page needs JavaScript. Please enable it, or open a full database from Knowledge Services.",
+    "filterLabel": "Content type",
+    "matchLabel": "Match",
+    "match": {
+      "contains": "Contains",
+      "prefix": "Starts with"
+    },
+    "sortLabel": "Sort by",
+    "sort": {
+      "relevance": "Relevance",
+      "newest": "Newest",
+      "title": "Title A–Z"
+    },
+    "feature": {
+      "title": "Direct match for your search"
+    },
+    "initial": {
+      "title": "Type what you are looking for",
+      "text": "Search in Thai or English, or try one of these."
+    },
+    "empty": {
+      "titleBefore": "No results for ",
+      "titleAfter": "",
+      "spelling": "Check the spelling, or try a shorter word",
+      "similar": "Try a similar word:",
+      "allDatabases": "Search every database instead of one type",
+      "searchAll": "Search all databases",
+      "askAi": "Ask ORST Knowledge AI"
+    },
+    "error": {
+      "title": "Search results could not be shown",
+      "text": "There was a connection problem. Please try again."
+    }
+  },
+  "common": {
+    "sampleAnswer": "Sample answer",
+    "sampleData": "Sample data",
+    "onThisPage": "On this page"
+  },
+  "actions": {
+    "askAi": "Ask AI",
+    "readOnline": "Read online",
+    "openDatabase": "Open database",
+    "openEservice": "All e-Services",
+    "viewDetails": "View details",
+    "retry": "Try again",
+    "openFullDatabase": "Open full database",
+    "viewOriginalSource": "View original source",
+    "download": "Download",
+    "browsePublications": "Browse all books"
+  },
+  "home": {
+    "hero": {
+      "title": "Correct Thai",
+      "titleEnd": "starts here",
+      "lead": "Check meanings and spellings, coined terms and transliterations, following the Royal Society's standards.",
+      "search": "Look up a word",
+      "services": "Our services"
+    },
+    "banner": {
+      "label": "Announcements and featured services",
+      "choose": "Choose a slide",
+      "previous": "Previous slide",
+      "next": "Next slide"
+    },
+    "quick": {
+      "label": "Quick services",
+      "eservice": "Electronic<br>services",
+      "feedback": "Questions<br>and feedback"
+    },
+    "searchCard": {
+      "title": "Search knowledge",
+      "subtitle": "Dictionary, coined terms, transliteration, books and articles in one place.",
+      "scopeLabel": "Search in",
+      "tryLabel": "Try"
+    },
+    "services": {
+      "title": "Services and sources",
+      "lead": "Reach the Office's services and knowledge resources in one place, quickly and easily.",
+      "viewAll": "All services",
+      "open": "Open",
+      "moreTitle": "More online services",
+      "featuredLabel": "Featured service",
+      "eservice": "e-Service"
+    },
+    "notices": {
+      "title": "Notices and procurement",
+      "lead": "Office notices, procurement and job vacancies.",
+      "tabs": {
+        "general": "Notices",
+        "procurement": "Procurement",
+        "jobs": "Jobs"
+      },
+      "viewAll": {
+        "general": "All notices",
+        "procurement": "All procurement notices",
+        "jobs": "All job vacancies"
+      },
+      "new": "New",
+      "searchLabel": "Search this category",
+      "searchPlaceholder": "Search notices…",
+      "viewLabel": "Layout",
+      "viewList": "Show as list",
+      "viewGrid": "Show as grid",
+      "prev": "Previous page",
+      "next": "Next page",
+      "types": {
+        "office": "Office notice",
+        "pr": "Public relations",
+        "ebidding": "Invitation to bid (e-bidding)",
+        "reference": "Reference price",
+        "result": "Result",
+        "contract": "Contract disclosure",
+        "apply": "Applications open",
+        "candidates": "Eligible candidates"
+      },
+      "items": {
+        "g1": "Office of the Royal Society: applications for appointment as an associate fellow, Academy of Moral and Political Sciences",
+        "g2": "Applications open for associate fellows to be elected fellows of the Royal Society",
+        "g3": "List of participants in the workshop “Using the ancient-script font set of Thailand”",
+        "g4": "Royal Society knowledge for society: academic forum on “Biodiversity: an asset for the economy and society of the future”",
+        "g5": "Office of the Royal Society: applications for appointment as an associate fellow, Academy of Arts",
+        "g6": "Office of the Royal Society: criteria and rates of remuneration for the officials and committees responsible for public procurement and supplies administration",
+        "p1": "Office of the Royal Society: e-bidding to lease two vehicles with drivers — a saloon car and a 12-seat van — for a five-year (60-month) term",
+        "p2": "Office of the Royal Society: e-bidding to purchase an equipment set to improve the Office's knowledge management and communication",
+        "p3": "Office of the Royal Society: winning bid for printing the book “The Royal Society: Present and Future” for the Royal Society's 100th anniversary (e-bidding)",
+        "p4": "Office of the Royal Society: winning bid for hiring an air-conditioned van with driver (fuel included), by specific method",
+        "p5": "Office of the Royal Society: e-bidding to print the book “The Royal Society: Present and Future” for the Royal Society's 100th anniversary",
+        "p6": "Cancellation of the e-bidding to purchase 80 enterprise artificial-intelligence processing licences for the 2026 fiscal year",
+        "j1": "Office of the Royal Society: applications for appointment as an associate fellow, Academy of Moral and Political Sciences",
+        "j2": "Applications open for associate fellows to be elected fellows of the Royal Society",
+        "j3": "Office of the Royal Society: applications for appointment as an associate fellow, Academy of Arts",
+        "j4": "Screening Committee: list of candidates cleared for appointment to a director-level (junior) position",
+        "j5": "Office of the Royal Society: criteria and method for appraising the performance of civil servants for the 2026 fiscal year"
+      }
+    },
+    "featured": {
+      "title": "Featured knowledge",
+      "lead": "Articles and media that help people use Thai correctly, easy to understand and put into practice.",
+      "viewAll": "Explore the full library",
+      "readMore": "Read more",
+      "carouselLabel": "Featured stories",
+      "main": {
+        "type": "Article",
+        "title": "Commonly misspelled transliterated words",
+        "excerpt": "Everyday foreign words that are often written incorrectly in Thai, with tips for getting them right."
+      },
+      "items": {
+        "a": {
+          "type": "Coined terms",
+          "title": "Coined terms and science communication",
+          "excerpt": "Where coined terms come from and how they help share knowledge with the public."
+        },
+        "b": {
+          "type": "Article",
+          "title": "Punctuation in official Thai writing",
+          "excerpt": "What to know about spacing and the marks used most often in documents."
+        },
+        "c": {
+          "type": "Infographic",
+          "title": "Words often misspelled in daily life",
+          "excerpt": "Common mistakes summarised visually, easy to read and apply."
+        }
+      }
+    },
+    "publications": {
+      "title": "Books and e-books",
+      "lead": "The Office's dictionaries, rules and reference works, to read or search online.",
+      "viewAll": "All books",
+      "filterLabel": "Filter by category",
+      "prev": "Scroll left",
+      "next": "Scroll right",
+      "groups": {
+        "all": "All",
+        "dictionary": "Dictionaries",
+        "rules": "Rules",
+        "reference": "Reference"
+      },
+      "items": {
+        "a": {
+          "title": "Royal Institute Dictionary, B.E. 2554 (2011)",
+          "year": "2554",
+          "format": "Online edition",
+          "desc": "Check meanings and spellings in the dictionary."
+        },
+        "e": {
+          "title": "Thai Sign Language Dictionary, Royal Society edition",
+          "format": "Online database",
+          "desc": "Look up Thai sign language for Thai words online."
+        },
+        "b": {
+          "title": "Principles of Thai punctuation and other marks",
+          "year": "{{PUBLICATION_YEAR}}",
+          "format": "Online document",
+          "desc": "For when you are unsure how to use commas, quotation marks or mai yamok."
+        },
+        "c": {
+          "title": "Principles of transliteration",
+          "year": "{{PUBLICATION_YEAR}}",
+          "format": "Online document",
+          "desc": "For writing foreign names and words in Thai script."
+        },
+        "f": {
+          "title": "Romanization of Thai script",
+          "format": "Online document",
+          "desc": "For writing Thai names and words in Roman script."
+        },
+        "g": {
+          "title": "Writing abbreviations",
+          "format": "Online document",
+          "desc": "Check how abbreviations should be written."
+        },
+        "d": {
+          "title": "Thai Geographical Gazetteer",
+          "year": "{{PUBLICATION_YEAR}}",
+          "format": "Online database",
+          "desc": "Find place names in Thailand with their correct spelling."
+        },
+        "h": {
+          "title": "Names of provinces, districts, subdistricts and khet/khwaeng",
+          "format": "Online document",
+          "desc": "Check the spelling of provinces, districts, subdistricts, khet and khwaeng."
+        }
+      }
+    },
+    "news": {
+      "title": "News and activities",
+      "lead": "The latest news, activities and updates from the Office of the Royal Society.",
+      "viewAll": "All news",
+      "filterLabel": "Filter by news type",
+      "empty": "No news of this type yet",
+      "filters": {
+        "all": "All",
+        "announcement": "Announcements",
+        "notice": "Notices",
+        "activity": "Activities"
+      },
+      "cats": {
+        "announcement": "Announcement",
+        "notice": "Notice",
+        "activity": "Activity"
+      },
+      "slides": {
+        "s1": {
+          "title": "Sample featured Office activity",
+          "summary": "A short summary with photos, so readers can decide whether to read on."
+        }
+      },
+      "items": {
+        "a": {
+          "title": "Annual General Meeting 2024",
+          "summary": "A meeting to report on the year's work and consider the organisation's direction, openly and fairly."
+        },
+        "b": {
+          "title": "Join us for National Thai Language Day",
+          "summary": "A summary of the event, with photos and how to take part."
+        },
+        "c": {
+          "title": "New notice from the Office of the Royal Society",
+          "summary": "Details of the notice and related documents."
+        }
+      }
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "lead": "Short answers to what people ask most often.",
+      "viewAll": "All frequently asked questions",
+      "helpTitle": "Can't find your answer?",
+      "helpText": "Ask the Office directly by phone or email.",
+      "helpCta": "Contact the Office",
+      "answerLabel": "Answer",
+      "items": {
+        "search": {
+          "q": "Where can I look up a word's meaning or spelling?",
+          "a": "Type the word in the knowledge search on the home page; it searches the dictionary, coined terms and transliteration at once.",
+          "link": "Go to search"
+        },
+        "submit": {
+          "q": "How do I propose a word for consideration?",
+          "a": "Send the word through the Office's online dictionary system.",
+          "link": "Open the online dictionary"
+        },
+        "books": {
+          "q": "Where can I ask about or order the Office's books?",
+          "a": "Browse the list on the Books and e-books page, and email [[c:contact.publicationsEmail]] about books.",
+          "link": "Books and e-books"
+        },
+        "contact": {
+          "q": "How can I contact the Office?",
+          "a": "Call [[c:contact.phoneDisplay]] or email [[c:contact.email]]. The address and other channels are on the contact page.",
+          "link": "Contact the Office"
+        },
+        "subscribe": {
+          "q": "How do I get the Office's news?",
+          "a": "Subscribe to receive new notices and events from the Office.",
+          "link": "Subscribe to news"
+        }
+      }
+    },
+    "calendar": {
+      "allDay": "All day",
+      "title": "Activity calendar",
+      "lead": "Lectures, training, exhibitions and academic meetings by the Office.",
+      "viewAll": "Full activity calendar",
+      "today": "Today",
+      "prev": "Previous",
+      "next": "Next",
+      "close": "Close",
+      "details": "Details",
+      "viewLabel": "Calendar view",
+      "views": {
+        "month": "Month",
+        "week": "Week",
+        "agenda": "Schedule"
+      },
+      "filterLabel": "Activity type",
+      "timeUnit": "",
+      "types": {
+        "forum": "Academic forum",
+        "training": "Workshop",
+        "council": "Council affairs"
+      },
+      "places": {
+        "officeOnline": "Office of the Royal Society and online",
+        "centara": "Centara Life Government Complex & Convention Centre Chaeng Watthana"
+      },
+      "items": {
+        "biodiversity": "Royal Society knowledge for society forum: “Biodiversity: A Foundation for Future Economic and Social Development”",
+        "fontWorkshop": "Workshop on the ancient-script font set of Thailand: Lanna Dhamma, Isan Dhamma, Thai Noi, Thai Nithet and Khom Thai",
+        "council": "Council affairs meeting"
+      }
+    },
+    "links": {
+      "title": "Related websites",
+      "lead": "Government agencies and related services in one place, so the information you need is easy to reach.",
+      "items": {
+        "citizenGuide": {
+          "name": "Citizen's manual",
+          "desc": "Guides for the public on requesting government services."
+        },
+        "ginfo": {
+          "name": "GINFO government agency database",
+          "desc": "Look up information on government agencies."
+        },
+        "etda": {
+          "name": "Electronic Transactions Development Agency",
+          "desc": "The national agency for electronic transactions."
+        },
+        "complaints": {
+          "name": "Complaints and petitions",
+          "desc": "Channels for complaints and petitions to the government."
+        },
+        "knowledgeCenter": {
+          "name": "National knowledge centre project",
+          "desc": "A collection of government knowledge resources."
+        },
+        "infoCenter": {
+          "name": "Official information centre of the Office of the Royal Society",
+          "desc": "Information the Office publishes for the public."
+        },
+        "nacc": {
+          "name": "National Anti-Corruption Commission",
+          "desc": "Information on preventing and suppressing corruption."
+        },
+        "naccLearning": {
+          "name": "NACC e-learning",
+          "desc": "Guidance on declaring assets and liabilities."
+        },
+        "oath": {
+          "name": "Oath of allegiance ceremony",
+          "desc": "Information about the oath of allegiance ceremony."
+        }
+      }
+    }
+  },
+  "assistant": {
+    "label": "Ways to contact the Office",
+    "eyebrow": "Contact us",
+    "title": "Chat or ask the Office",
+    "close": "Hide the contact shortcut",
+    "panelEyebrow": "Office of the Royal Society",
+    "greeting": "How can we help?",
+    "sub": "Ask a question, find an answer, or let the AI assistant guide you, any time of day.",
+    "panelClose": "Close contact options",
+    "askLabel": "Ask the knowledge assistant",
+    "aiPlaceholder": "Type your question…",
+    "aiSend": "Send the question",
+    "topicsLabel": "Common topics",
+    "topics": {
+      "procurement": "Procurement",
+      "letters": "Official letters",
+      "words": "Word usage",
+      "contact": "Contacting us"
+    },
+    "popularTitle": "Popular",
+    "popularAll": "All questions",
+    "popular": {
+      "procurement": "How procurement works",
+      "words": "Using words correctly",
+      "contact": "How to contact the Office",
+      "news": "Latest notices and news"
+    },
+    "channelsLabel": "Reach our staff",
+    "chat": {
+      "name": "Chat",
+      "desc": "Messenger · ORST Chat"
+    },
+    "line": {
+      "name": "LINE",
+      "desc": "LINE Official"
+    },
+    "phone": {
+      "name": "Call"
+    }
+  },
+  "eservice": {
+    "submitWord": {
+      "name": "Suggest a word",
+      "short": "Submit a word through the online dictionary"
+    },
+    "suggestTerm": {
+      "name": "Suggest a coined term",
+      "short": "Send suggestions through the coined-terms system"
+    },
+    "complaints": {
+      "name": "Submit a complaint",
+      "short": "Complaints or feedback about our services"
+    }
+  },
+  "eservicePage": {
+    "availableTitle": "Available services",
+    "availableLead": "Some services open in dedicated Office systems.",
+    "upcomingTitle": "Other Office services",
+    "upcomingLead": "This list will be updated when official information is confirmed.",
+    "helpTitle": "Need help?",
+    "helpLead": "Contact the Office during official working hours."
+  },
+  "transparency": {
+    "ita": {
+      "name": "ITA — Integrity and Transparency Assessment",
+      "lead": "Disclosures under the Integrity and Transparency Assessment for public-sector agencies."
+    },
+    "plans": {
+      "name": "Plans",
+      "lead": "Strategic plan, action plan, risk management and service standards."
+    },
+    "budget": {
+      "name": "Budget",
+      "lead": "Budget information and internal audit."
+    },
+    "procurement": {
+      "name": "Procurement",
+      "lead": "Procurement plans, notices, results and reference prices."
+    },
+    "reports": {
+      "name": "Performance reports",
+      "lead": "Annual and performance reports."
+    },
+    "laws": {
+      "name": "Laws and regulations",
+      "lead": "Relevant laws, regulations and rules."
+    },
+    "publicInformation": {
+      "name": "Official information",
+      "lead": "Information disclosed under the Official Information Act, B.E. 2540 (1997)."
+    },
+    "complaints": {
+      "name": "Complaints and anti-corruption",
+      "lead": "Complaint channels and the Anti-Corruption Operation Centre."
+    },
+    "links": {
+      "strategicPlan": "Strategic plan",
+      "actionPlan": "Government action plan",
+      "riskManagement": "Risk management",
+      "serviceStandards": "Service standards",
+      "internalAudit": "Internal audit",
+      "procurementPlan": "Procurement plan",
+      "procurementNotices": "Procurement notices",
+      "procurementResults": "Procurement results",
+      "referencePrices": "Reference prices",
+      "laws": "Laws, regulations and rules",
+      "publicInformation": "Official information",
+      "complaints": "Complaint channels",
+      "antiCorruption": "Anti-Corruption Operation Centre"
+    }
+  },
+  "transparencyPage": {
+    "interimNote": "While content is being migrated, some links open the relevant page on the Office’s current website."
+  },
+  "knowledgeHub": {
+    "databasesLead": "Thai language reference databases of the Office of the Royal Society.",
+    "toolsLead": "Tools that help you find and understand knowledge."
+  },
+  "libraryPage": {
+    "articlesLead": "Articles on Thai language and academic topics, written to be easy to read.",
+    "articlesAll": "All articles in the knowledge archive",
+    "mediaLead": "Knowledge as images, video and lectures.",
+    "archivesLead": "Related external sources."
+  },
+  "servicePage": {
+    "browseTitle": "Browse by letter",
+    "browseLead": "Choose a letter to see entries that start with it.",
+    "howToTitle": "How to use",
+    "faq": {
+      "modes": {
+        "q": "What is the difference between “Starts with” and “Contains”?",
+        "a": "“Starts with” shows only entries that begin with your search. “Contains” shows every entry that includes it anywhere — useful when you are unsure of the spelling."
+      },
+      "notFound": {
+        "q": "What if I cannot find a word?",
+        "a": "Check the spelling, try a shorter word, search all databases, or ask the knowledge assistant for similar words."
+      },
+      "source": {
+        "q": "Where does this information come from?"
+      }
+    },
+    "asideLabel": "More about this service",
+    "aboutTitle": "About this database",
+    "facts": {
+      "source": "Source",
+      "searchModes": "Search options",
+      "searchModesValue": "Starts with · Contains · Browse by letter",
+      "maintainer": "Maintained by"
+    },
+    "askTitle": "Still looking?",
+    "askText": "Ask the knowledge assistant in plain language and get cited sources.",
+    "relatedTitle": "Related services"
+  },
+  "aiPage": {
+    "lead": "Ask about words, coined terms, transliteration or Office documents. The assistant always separates official information from AI-generated explanation.",
+    "noscript": "ORST Knowledge AI needs JavaScript. Please enable it in your browser.",
+    "inputLabel": "Your question",
+    "placeholder": "e.g. What is the coined Thai term for Artificial Intelligence?",
+    "hint": "Please do not include personal information in your question.",
+    "errorEmpty": "Please type a question first.",
+    "examplesTitle": "Example questions",
+    "disclaimer": "AI-generated explanations may be incomplete or inaccurate and are not official rulings. Always check the original sources.",
+    "asideLabel": "About ORST Knowledge AI",
+    "how": {
+      "title": "How the assistant works",
+      "step1": "Searches Royal Society databases for your question",
+      "step2": "Shows matching official information first",
+      "step3": "Adds an explanation to make it easier to understand",
+      "step4": "Links the original sources so you can verify"
+    },
+    "labels": {
+      "title": "Reading answer labels",
+      "officialText": "Text taken directly from Royal Society databases or documents.",
+      "generatedText": "An explanation generated to aid understanding. Not an official ruling."
+    },
+    "help": {
+      "title": "Need an answer from staff?",
+      "text": "For an official ruling, please contact the Office directly."
+    },
+    "youAsked": "Question",
+    "loading": "Searching Royal Society databases…",
+    "sections": {
+      "answer": "Short answer",
+      "official": "Official Royal Society information",
+      "explanation": "Further explanation",
+      "related": "Related knowledge",
+      "sources": "Sources"
+    },
+    "noOfficial": "No official information matches this question. The explanation below is AI-generated only — please check the sources or contact the Office.",
+    "generatedNote": "Check against official information before citing.",
+    "feedback": {
+      "question": "Was this answer helpful?",
+      "yes": "Helpful",
+      "no": "Not helpful"
+    },
+    "error": {
+      "title": "The question cannot be answered right now",
+      "text": "There was a connection problem. Please try again."
+    }
+  },
+  "collection": {
+    "noscript": "Filtering this list needs JavaScript.",
+    "filtersLabel": "List filters",
+    "keyword": "Keyword",
+    "keywordPlaceholder": "Type a title or keyword",
+    "type": "Type",
+    "allTypes": "All types",
+    "year": "Year",
+    "allYears": "All years",
+    "subject": "Subject",
+    "allSubjects": "All subjects",
+    "reset": "Clear filters",
+    "empty": {
+      "title": "Nothing matches these filters",
+      "text": "Try fewer filters or a different keyword."
+    },
+    "error": {
+      "title": "The list could not be loaded",
+      "text": "Please try again later."
+    }
+  },
+  "publications": {
+    "categories": {
+      "dictionary": "Dictionary",
+      "terminology": "Coined terms",
+      "principles": "Principles",
+      "reference": "Reference",
+      "journal": "Journal"
+    },
+    "subjects": {
+      "language": "Language and linguistics",
+      "science": "Science and technology",
+      "social": "Social sciences and humanities",
+      "arts": "Arts",
+      "geography": "Geography"
+    }
+  },
+  "contact": {
+    "organization": "Organisation",
+    "address": "Address",
+    "phone": "Telephone",
+    "fax": "Fax",
+    "email": "Email",
+    "publicationsEmail": "Additional email",
+    "webmaster": "Webmaster",
+    "coordinates": "Coordinates",
+    "latitude": "Latitude",
+    "longitude": "Longitude",
+    "officeHours": "Office hours",
+    "viewMap": "View map and directions",
+    "allChannels": "All contact channels",
+    "call": "Call the Office",
+    "sendEmail": "Send an email"
+  },
+  "contactPage": {
+    "detailsTitle": "Contact details",
+    "otherTitle": "Other channels",
+    "mapTitle": "Map",
+    "mapNote": "A map will appear once official coordinates are confirmed. Meanwhile, use the map and directions link."
+  },
+  "cookies": {
+    "title": "This website uses cookies",
+    "lead": "We use necessary cookies to run the site, and ask your consent for others that help us improve it.",
+    "policy": "Read the cookie policy",
+    "settings": "Cookie settings",
+    "necessaryOnly": "Necessary only",
+    "acceptAll": "Accept all",
+    "modalTitle": "Cookie settings",
+    "modalLead": "Choose which kinds of cookies to allow. You can change this any time from \"Cookie settings\" at the foot of the site.",
+    "close": "Close cookie settings",
+    "alwaysOn": "Always on",
+    "save": "Save settings",
+    "necessary": {
+      "name": "Necessary cookies",
+      "desc": "Keep the site working, for example remembering your language and accessibility settings. They cannot be turned off."
+    },
+    "analytics": {
+      "name": "Analytics cookies",
+      "desc": "Count visits anonymously so we can improve the site."
+    },
+    "functional": {
+      "name": "Functional cookies",
+      "desc": "Remember the choices you make, such as showing items as cards or a list."
+    }
+  },
+  "footer": {
+    "contactTitle": "Contact the Office",
+    "mapHeading": "Map",
+    "mapTitle": "Map of the Office of the Royal Society",
+    "mapShow": "Show map",
+    "mapOpen": "Open in Google Maps",
+    "quickLinks": "Quick links",
+    "policies": "Policies & legal",
+    "contactAndSite": "Contact & site information",
+    "rights": "All rights reserved.",
+    "visitors": "Website visitors",
+    "visitorsUnit": "visits",
+    "visitorsAsOf": "as of {date}",
+    "privacyShort": "Privacy",
+    "cookiesShort": "Cookies",
+    "disclaimerShort": "Disclaimer",
+    "backHome": "Back to home",
+    "popular": "Popular services",
+    "aboutGroup": "About the Office",
+    "help": "Help",
+    "location": "Our office",
+    "follow": "Follow us",
+    "procurement": "Notices and procurement",
+    "faq": "Frequently asked questions",
+    "complaints": "Complaints",
+    "websiteShort": "Website policy",
+    "securityShort": "Security",
+    "copyrightShort": "Copyright"
+  },
+  "policies": {
+    "website": {
+      "name": "Website policy"
+    },
+    "privacy": {
+      "name": "Privacy and cookie policy"
+    },
+    "cookies": {
+      "name": "Use of cookies"
+    },
+    "security": {
+      "name": "Website security policy"
+    },
+    "copyright": {
+      "name": "Copyright notice"
+    },
+    "disclaimer": {
+      "name": "Disclaimer"
+    }
+  },
+  "policiesPage": {
+    "pending": "The official policy texts will be published once approved by the Office."
+  },
+  "sitemapPage": {
+    "main": "Main pages and services",
+    "filterLabel": "Filter the sitemap",
+    "clear": "Clear the filter",
+    "jumpTo": "Jump to a section",
+    "collapseAll": "Collapse all",
+    "toggleSection": "Collapse or expand this section",
+    "pageCount": "{count} pages",
+    "pageCountMain": "3 pages",
+    "pageCountPolicies": "5 pages",
+    "emptyText": "Try a shorter word, or search the whole of the Office's knowledge base.",
+    "emptyAction": "Go to search",
+    "filterShort": "Filter pages…"
+  },
+  "notFound": {
+    "title": "We can’t find that page",
+    "text": "It may have moved or no longer exist. Try searching, or go back to the homepage."
+  },
+  "pages": {
+    "home": {
+      "title": "Home",
+      "description": "Search the dictionary, coined terms, transliterations, books and Thai knowledge from the Office of the Royal Society."
+    },
+    "search": {
+      "title": "Search results",
+      "heading": "Search knowledge",
+      "description": "Search every knowledge database of the Office of the Royal Society."
+    },
+    "knowledge": {
+      "title": "Dictionaries & Knowledge",
+      "lead": "Thai language databases and knowledge tools from the Office of the Royal Society.",
+      "description": "Dictionary, coined terms, transliteration and knowledge search tools."
+    },
+    "dictionary": {
+      "title": "Dictionary",
+      "description": "Look up meanings and spelling in the Royal Institute Dictionary, B.E. 2554 (2011)."
+    },
+    "terminology": {
+      "title": "Coined Terms",
+      "description": "Search Thai academic terms coined by the Royal Society against their English equivalents."
+    },
+    "transliteration": {
+      "title": "Transliteration",
+      "description": "Find how foreign words are written in Thai script under transliteration principles."
+    },
+    "knowledge-ai": {
+      "title": "ORST Knowledge AI",
+      "crumb": "Knowledge AI",
+      "heading": "ORST Knowledge AI",
+      "description": "Ask about Thai language and knowledge, with official sources from the Royal Society."
+    },
+    "library": {
+      "title": "Knowledge Library",
+      "lead": "Articles, publications and learning media from the Office of the Royal Society.",
+      "description": "Articles, books, e-books, infographics and media from the Office of the Royal Society."
+    },
+    "publications": {
+      "title": "Books & E-Books",
+      "lead": "Find Office publications by type, year and subject.",
+      "description": "Books and e-books of the Office of the Royal Society."
+    },
+    "news": {
+      "title": "News & Events",
+      "lead": "Announcements, activities, academic lectures and notices from the Office.",
+      "description": "Latest news, activities and notices from the Office of the Royal Society."
+    },
+    "royal-society": {
+      "title": "The Royal Society",
+      "lead": "The Royal Society, its three academies and its Fellows.",
+      "description": "The Royal Society of Thailand, its Academies of Moral and Political Sciences, Science and Arts, and its Fellows."
+    },
+    "about": {
+      "title": "About ORST",
+      "lead": "Organisation, history and administration of the Office of the Royal Society.",
+      "description": "Vision, history, structure and executives of the Office of the Royal Society."
+    },
+    "transparency": {
+      "title": "Open Data & Transparency",
+      "lead": "Information the Office discloses to the public, organised to be easy to find.",
+      "description": "ITA, plans, budget, procurement, reports, laws and complaint channels of the Office of the Royal Society."
+    },
+    "contact": {
+      "title": "Contact us",
+      "lead": "Address, contact channels and directions to the Office.",
+      "description": "Address, telephone, email and map for the Office of the Royal Society."
+    },
+    "e-service": {
+      "title": "e-Service",
+      "lead": "Online services of the Office of the Royal Society.",
+      "description": "Online services of the Office of the Royal Society."
+    },
+    "sitemap": {
+      "title": "Sitemap",
+      "lead": "Every page of this website as a text list.",
+      "description": "Sitemap of the Office of the Royal Society website."
+    },
+    "policies": {
+      "title": "Policies & Legal",
+      "lead": "Website policy, personal data protection, security and copyright.",
+      "description": "Website policy, privacy and cookie policy, and terms of use."
+    },
+    "not-found": {
+      "title": "Page not found",
+      "description": "The page you are looking for could not be found."
+    }
+  },
+  "js": {
+    "search": {
+      "types": {
+        "all": "All",
+        "dictionary": "Dictionary",
+        "terminology": "Coined terms",
+        "transliteration": "Transliteration",
+        "knowledge": "Knowledge",
+        "publication": "Books",
+        "member": "Fellows",
+        "news": "News"
+      },
+      "popularTitle": "Suggested searches",
+      "popular": [
+        "Artificial intelligence",
+        "Soft power",
+        "Metaverse",
+        "Computer"
+      ],
+      "loading": "Searching…",
+      "suggestionCount": "{count} suggestions",
+      "noSuggestions": "No suggestions for “{query}”",
+      "viewAll": "See all results for “{query}”",
+      "askAi": "Ask ORST Knowledge AI",
+      "suggestError": "Suggestions could not be loaded. Press Search to try again.",
+      "summary": "{count} results for “{query}”",
+      "summaryPrefix": "{count} results starting with “{query}”",
+      "loadingResults": "Loading results…",
+      "scopePlaceholders": {
+        "dictionary": "Search the dictionary",
+        "terminology": "Search coined terms in Thai or English",
+        "transliteration": "Search transliterations"
+      },
+      "featureLabels": {
+        "dictionary": "From the Royal Institute Dictionary",
+        "terminology": "Coined term from the Royal Society",
+        "transliteration": "Transliteration from the Royal Society"
+      },
+      "sourceLabel": "Source: {source}"
+    },
+    "collection": {
+      "summary": "{count} items",
+      "summaryFiltered": "{count} of {total} items",
+      "loading": "Loading items…",
+      "formats": {
+        "online": "Online edition",
+        "ebook": "E-Book",
+        "pdf": "PDF",
+        "print": "Print"
+      }
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next",
+      "page": "Page {page}"
+    },
+    "ai": {
+      "examples": {
+        "aiTerm": "What is the coined Thai term for Artificial Intelligence?",
+        "softPower": "How should “Soft Power” be written in Thai?",
+        "metaverse": "Is there a coined Thai term for Metaverse?",
+        "thaiDocs": "Find documents about the Thai language"
+      },
+      "labels": {
+        "official": "Royal Society information",
+        "generated": "AI-generated explanation"
+      },
+      "status": {
+        "loading": "Looking for an answer",
+        "done": "Answer ready",
+        "error": "The question could not be answered"
+      },
+      "feedbackThanks": "Thank you for your feedback",
+      "recordSummary": "In {type}, “{term}” is given as “{answer}”.",
+      "recordExplanation": "The information above comes directly from the database. To see the academic field or usage context, open the original source.",
+      "fallbackSummary": "No answer matching this question was found in Royal Society databases yet.",
+      "fallbackExplanation": "Try naming the Thai or English word you need, or search all databases to see close matches.",
+      "searchRelated": "Search “{query}” in all databases"
+    },
+    "common": {
+      "externalLink": " (opens external website)"
+    },
+    "carousel": {
+      "goTo": "Go to slide {number}: {title}",
+      "pause": "Pause automatic slides",
+      "play": "Play automatic slides"
+    },
+    "sitemap": {
+      "total": "{total} pages in total",
+      "filtered": "{count} of {total} pages",
+      "noResults": "No page matches “{query}”",
+      "collapseAll": "Collapse all",
+      "expandAll": "Expand all"
+    },
+    "a11y": {
+      "readAloud": "Read this page aloud",
+      "readAloudStop": "Stop reading"
+    },
+    "notices": {
+      "range": "{from}–{to} of {total}",
+      "empty": "No notices match “{query}”"
+    },
+    "calendar": {
+      "allDay": "All day",
+      "past": "Past",
+      "upcoming": "Coming up",
+      "recent": "Recent events",
+      "onDay": "Events on {date}",
+      "noneOnDay": "No events on this day",
+      "backToUpcoming": "Show what's coming up",
+      "more": "+{count} more",
+      "prevMonth": "Previous month",
+      "nextMonth": "Next month",
+      "empty": "No events in this period",
+      "eventCount": "{count} events",
+      "today": "Today",
+      "timeUnit": ""
+    },
+    "news": {
+      "goToSlide": "Featured story {n}"
+    },
+    "featured": {
+      "goToSlide": "Featured story {n}"
+    },
+    "links": {
+      "count": "{n} websites"
+    },
+    "assistant": {
+      "pending": "Official link pending"
+    }
+  }
+}

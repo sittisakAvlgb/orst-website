@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "orst-static",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["scripts/serve.mjs", "5187"],
+      "port": 5187
+    }
+  ]
+}

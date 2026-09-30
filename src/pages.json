@@ -1,0 +1,28 @@
+{
+  "pages": [
+    { "id": "home", "template": "home.html", "path": "", "section": "home", "schema": "website", "scripts": ["notices", "calendar", "books", "home-news", "home-links", "home-featured", "home-services", "home-faq"] },
+    { "id": "search", "template": "search.html", "path": "search/", "parent": "home", "noindex": true },
+
+    { "id": "knowledge", "template": "knowledge.html", "path": "knowledge/", "parent": "home", "section": "knowledge" },
+    { "id": "dictionary", "template": "service.html", "path": "knowledge/dictionary/", "parent": "knowledge-dictionaries", "section": "knowledge", "data": { "service": "dictionary", "alphabet": "th" } },
+    { "id": "terminology", "template": "service.html", "path": "knowledge/terminology/", "parent": "knowledge-dictionaries", "section": "knowledge", "data": { "service": "terminology", "alphabet": "en" } },
+    { "id": "transliteration", "template": "service.html", "path": "knowledge/transliteration/", "parent": "knowledge-dictionaries", "section": "knowledge", "data": { "service": "transliteration", "alphabet": "en" } },
+    { "id": "knowledge-ai", "template": "knowledge-ai.html", "path": "knowledge/ai/", "parent": "knowledge", "section": "knowledge", "scripts": ["ai"] },
+
+    { "id": "library", "template": "library.html", "path": "library/", "parent": "knowledge-collections", "section": "knowledge" },
+    { "id": "publications", "template": "publications.html", "path": "library/publications/", "parent": "knowledge-collections", "section": "knowledge", "scripts": ["collection"] },
+
+    { "id": "news", "template": "news.html", "path": "news/", "parent": "home", "section": "news", "scripts": ["collection"] },
+
+    { "id": "royal-society", "template": "royal-society.html", "path": "royal-society/", "parent": "home", "section": "royal-society", "scripts": ["collection"] },
+
+    { "id": "transparency", "template": "transparency.html", "path": "transparency/", "parent": "home", "section": "transparency" },
+    { "id": "contact", "template": "contact.html", "path": "contact/", "parent": "home", "section": "contact" },
+
+    { "id": "e-service", "template": "e-service.html", "path": "e-service/", "parent": "public-services", "section": "public-services" },
+
+    { "id": "sitemap", "template": "sitemap.html", "path": "sitemap/", "parent": "home", "scripts": ["sitemap"] },
+    { "id": "policies", "template": "policies.html", "path": "policies/", "parent": "home" },
+    { "id": "not-found", "template": "404.html", "path": "404.html", "noindex": true, "absoluteLinks": true }
+  ]
+}
