@@ -333,7 +333,7 @@ function renderHeadMeta(ctx) {
     `<meta property="og:description" content="${escapeHtml(description)}">`,
     `<meta property="og:url" content="${canonical}">`,
     `<!-- Replace with an official 1200×630 share image -->`,
-    `<meta property="og:image" content="${config.siteUrl}/assets/images/logo.png">`,
+    `<meta property="og:image" content="${config.siteUrl}/assets/images/logo-emblem.png">`,
     `<meta property="og:locale" content="${LOCALES[lang].og}">`,
     `<meta property="og:locale:alternate" content="${LOCALES[ctx.altLang].og}">`,
     '<meta name="twitter:card" content="summary">',
@@ -355,7 +355,7 @@ function buildSchema(ctx, canonical) {
       name: dict.org.nameTh,
       alternateName: dict.org.nameEn,
       url: config.siteUrl,
-      logo: `${config.siteUrl}/assets/images/logo.png`,
+      logo: `${config.siteUrl}/assets/images/logo-emblem.png`,
       email: contact.email,
       telephone: contact.phoneHref,
       address: {
