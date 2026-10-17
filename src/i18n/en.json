@@ -6,6 +6,10 @@
     "tagline": "Trusted Thai Knowledge, Easier to Discover",
     "prototypeNote": "Prototype website — some listed content is sample data"
   },
+  "brand": {
+    "nameTh": "สำนักงานราชบัณฑิตยสภา",
+    "nameEn": "Office of the Royal Society"
+  },
   "a11y": {
     "skipToContent": "Skip to main content",
     "breadcrumb": "Breadcrumb",

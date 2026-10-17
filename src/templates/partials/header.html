@@ -1,8 +1,9 @@
-<header class="site-header" data-site-header>
+﻿<header class="site-header" data-site-header>
   <div class="topbar">
     <div class="container topbar__inner">
-      <a class="brand" href="[[href:home]]">
-        <img src="[[root]]assets/images/logo.png" width="430" height="134" alt="[[t:a11y.logoAlt]]">
+      <a class="brand" href="[[href:home]]" aria-label="[[t:a11y.logoAlt]]">
+        <img src="[[root]]assets/images/logo.png" width="600" height="900" alt="">
+        <span class="brand__name"><span class="brand__th">[[t:brand.nameTh]]</span><span class="brand__en">[[t:brand.nameEn]]</span></span>
       </a>
 
       <div class="topbar__tools">
@@ -30,7 +31,7 @@
   <div class="menubar">
     <div class="container menubar__inner">
       <a class="menubar__brand" href="[[href:home]]">
-        <img src="[[root]]assets/images/logo.png" width="430" height="134" alt="[[t:a11y.logoAlt]]">
+        <img src="[[root]]assets/images/logo.png" width="600" height="900" alt="[[t:a11y.logoAlt]]">
       </a>
 
       <nav class="primary-nav" aria-label="[[t:a11y.mainNav]]" data-primary-nav>
@@ -50,8 +51,9 @@
 <dialog class="drawer" id="mobile-nav" aria-label="[[t:nav.menu]]" data-drawer>
   <div class="drawer__layout">
     <div class="drawer__header">
-      <a class="brand drawer__brand" href="[[href:home]]">
-        <img src="[[root]]assets/images/logo.png" width="430" height="134" alt="[[t:a11y.logoAlt]]" loading="lazy">
+      <a class="brand drawer__brand" href="[[href:home]]" aria-label="[[t:a11y.logoAlt]]">
+        <img src="[[root]]assets/images/logo.png" width="600" height="900" alt="" loading="lazy">
+        <span class="brand__name"><span class="brand__th">[[t:brand.nameTh]]</span><span class="brand__en">[[t:brand.nameEn]]</span></span>
       </a>
       <button type="button" class="icon-button" data-drawer-close>
         <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-close"></use></svg>
@@ -106,7 +108,7 @@
       </ul>
     </nav>
     <p class="search-dialog__hints" aria-hidden="true">
-      <span><kbd>↑</kbd><kbd>↓</kbd> [[t:search.hintMove]]</span>
+      <span><kbd>â†‘</kbd><kbd>â†“</kbd> [[t:search.hintMove]]</span>
       <span><kbd>Enter</kbd> [[t:search.hintOpen]]</span>
       <span><kbd>Esc</kbd> [[t:search.hintClose]]</span>
     </p>

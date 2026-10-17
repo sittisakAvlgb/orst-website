@@ -51,7 +51,7 @@
 .footer-brand__id { display: inline-flex; text-decoration: none; }
 
 /* The official lockup as supplied, at a readable height. */
-.footer-logo { width: auto; height: 56px; }
+.footer-logo { width: auto; height: 80px; }
 
 .footer-follow { display: flex; align-items: center; gap: var(--space-16); }
 .footer-follow__label { font-size: var(--text-sm); font-weight: var(--weight-semibold); color: var(--color-accent); }
@@ -291,3 +291,8 @@
 @media (prefers-reduced-motion: reduce) {
   .footer-links a { transition: none; }
 }
+
+.footer-brand__id { align-items: center; gap: var(--space-16); }
+.footer-brand__name { display: flex; flex-direction: column; line-height: 1.25; color: var(--color-text-primary); }
+.footer-brand__name .brand__th { color: var(--color-text-primary); font-size: 1.375rem; }
+.footer-brand__name .brand__en { font-size: 0.9375rem; }
